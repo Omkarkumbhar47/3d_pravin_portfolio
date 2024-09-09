@@ -5,27 +5,13 @@ import MainContainer from "./Components/MainContainer";
 import "./Style/Main.css";
 import "./index.css";
 import "./App.css";
+import Navbar from "./Components/Navbar";
 
 const App = () => {
   return (
-    <div className="w-full h-screen font-[Helvetica_Now_Display]">
+    <div className="w-full h-screen font-[Helvetica_Now_Display] mx-10">
       {/* Navbar */}
-      <div className="navbar flex capitalize gap-5 pt-10 absolute top-0 left-1/2 transform -translate-x-1/2">
-        {[
-          "iphone",
-          "ios",
-          "bnhkjk",
-          "android",
-          "iphone",
-          "ios",
-          "bnhkjk",
-          "android",
-        ].map((e, index) => (
-          <a href="#" key={index} className="text-white font-[500] text-md">
-            {e}
-          </a>
-        ))}
-      </div>
+      <Navbar />
 
       {/* Main Content */}
       <div className="absolute flex flex-col items-center text-white top-40 left-1/2 transform -translate-x-1/2">
@@ -41,7 +27,7 @@ const App = () => {
       </div>
 
       {/* Three.js Canvas */}
-      <Canvas camera={{ fov: 20, position: [0, -1, 220] }}>
+      {/* <Canvas camera={{ fov: 20, position: [0, -1, 220] }}>
         <Environment
           files={[
             "https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/4k/studio_small_09_4k.exr",
@@ -50,7 +36,7 @@ const App = () => {
         <ScrollControls pages={3}>
           <MainContainer />
         </ScrollControls>
-      </Canvas>
+      </Canvas> */}
     </div>
   );
 };
