@@ -10,7 +10,6 @@ import Navbar from "./Components/Navbar/Navbar";
 const App = () => {
   return (
     <div className="w-full h-screen font-[Helvetica_Now_Display] ">
-      {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}

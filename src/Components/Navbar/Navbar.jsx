@@ -1,97 +1,49 @@
-import React, { useState, useEffect, useRef } from "react";
-import logo from "../../../public/WB_Logo1.png";
-import { gsap } from "gsap";
+import { useState } from "react";
 import HamburgerMenu from "./HamburgerMenu";
-
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const menuItemsRef = useRef([]);
-  const sidebarRef = useRef(null);
-
-  useEffect(() => {
-    const tl = gsap.timeline({ paused: true });
-    
-    // Animation for mobile sidebar items
-    tl.fromTo(
-      menuItemsRef.current,
-      { x: 150, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.5, stagger: 0.15, ease: "power1.out" }
-    );
-
-    if (open) {
-      tl.play();
-    } else {
-      tl.reverse();
-    }
-
-    // Close sidebar on screen resize
-    const handleResize = () => {
-      if (window.innerWidth >= 768) setOpen(false);
-    };
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      tl.kill();
-    };
-  }, [open]);
-
-  const handleMenuToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className="mx-24">
-      <div className="flex justify-between items-center relative py-4">
-        <div>
-          <img src={logo} alt="Website Logo" className="w-20" />
+    <div className="relative">
+      <nav className="z-10 px-24 py-12 flex absolute tracking-wider justify-between uppercase items-center w-full">
+        <div className="whitespace-nowrap text-[0.50rem]">Scroll Down</div>
+        <div className="text-center z-50">
+          Pradip
+          <br />
+          Kamble
         </div>
-
-        {/* Desktop Navbar */}
-        <nav className="hidden md:flex space-x-6 items-center">
-          {["About Me", "Tech Stack", "Work Experience", "Portfolio", "Certificates"].map((item, index) => (
-            <a
-              href="#"
-              key={index}
-              className="text-md font-semibold text-black transition duration-200 hover:text-green-600 transform hover:scale-105"
-              ref={(el) => (menuItemsRef.current[index] = el)}
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="flex items-center md:hidden"
-          onClick={handleMenuToggle}
-          aria-expanded={open}
-        >
-          <HamburgerMenu open={open} />
+        <button onClick={() => setOpenMenu(true)}>
+          <HamburgerMenu />
         </button>
-      </div>
+      </nav>
 
-      {/* Sidebar Menu for Mobile */}
-      <div
-        ref={sidebarRef}
-        className={`fixed top-0 pt-28 text-3xl right-0 h-screen w-80 bg-[#d536362e] text-black p-10 transform transition-transform duration-300 ease-in-out ${
-          open ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-        }`}
-        aria-hidden={!open}
-      >
-        {["About Me", "Tech Stack", "Work Experience", "Portfolio", "Certificates"].map((item, index) => (
-          <a
-            href="#"
-            key={index}
-            className="menu-item text-lg font-semibold block mb-4 transition duration-200 hover:text-green-600"
-            ref={(el) => (menuItemsRef.current[index] = el)}
+      {openMenu && (
+        <div className="fixed inset-0 w-full  bg-opacity-70 backdrop-blur-sm flex flex-col h-screen z-40">
+          <button
+            onClick={() => setOpenMenu(false)}
+            className="absolute top-14 right-24  text-4xl"
           >
-            {item}
-          </a>
-        ))}
-      </div>
+            ×
+          </button>
+
+          <ul className="mt-44 absolute  w-fit mx-64 text-6xl font-semibold bg-[#15263218]">
+            <div className="relative text-xs opacity-40">Menu</div>
+            <li className=" py-8">
+              <a href="#home">Pradip Kamble</a>
+            </li>
+            <li className="py-8">
+              <a href="#about">About Me</a>
+            </li>
+            <li className="py-8">
+              <a href="#services">Gallery</a>
+            </li>
+            <li className="py-8">
+              <a href="#contact">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
-
 export default Navbar;
