@@ -5,7 +5,7 @@ import MainContainer from "./Components/MainContainer";
 import "./Style/Main.css";
 import "./index.css";
 import "./App.css";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 
 const App = () => {
   return (

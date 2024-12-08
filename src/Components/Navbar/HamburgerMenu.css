@@ -1,0 +1,51 @@
+.hamburger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 4px;
+  background-color: maroon;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: 0;
+}
+.bar2, .bar3 {
+  top: 13.5px;
+}
+.bar3 {
+  right: 0;
+}
+.bar4 {
+  bottom: 0;
+}
+
+.hamburger.open .bar1 {
+  top: 13.5px;
+  background-color: transparent;
+}
+
+.hamburger.open .bar2 {
+  left: 0;
+  width: 30px;
+  transform: rotate(45deg);
+}
+
+.hamburger.open .bar3 {
+  left: 0;
+  width: 30px;
+  transform: rotate(-45deg);
+}
+
+.hamburger.open .bar4,
+.hamburger.open .bar5 {
+  background-color: transparent;
+}
