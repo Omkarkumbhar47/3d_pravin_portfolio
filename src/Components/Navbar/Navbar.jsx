@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+const Navbar = ({openMenu, setOpenMenu}) => {
+  
 
   return (
     <div className="fixed inset-0">
@@ -12,24 +12,24 @@ const Navbar = () => {
       </div>
 
       {!openMenu && (
-    <nav className="fixed top-0 left-0 z-10 w-full flex justify-between items-center px-6 sm:px-12 md:px-24 pt-12 tracking-wider uppercase">
-    <div className="whitespace-nowrap text-[0.60rem]">Scroll Down</div>
-    <div className="flex gap-4 sm:gap-8 items-center">
-      <div className="flex items-center gap-2">
-        <span>Favorite</span>
-        <div className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-600 hover:bg-white hover:text-black transition-all">
-          <span className="text-xs font-semibold">0</span>
-        </div>
-      </div>
-      <span
-        className="text-lg cursor-pointer"
-        onClick={() => setOpenMenu(true)}
-      >
-        <i className="ri-menu-3-line"></i>
-      </span>
-    </div>
-  </nav>
-  
+        <nav className="fixed top-0 left-0 z-10 w-full flex justify-between items-center px-6 sm:px-12 md:px-24 pt-12 tracking-wider uppercase">
+          <div className="whitespace-nowrap text-[0.60rem]">Scroll Down</div>
+          <div className="flex gap-4 sm:gap-8 items-center">
+            <div className="flex items-center gap-2">
+              <span>Favorite</span>
+              <div className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-600 hover:bg-white hover:text-black transition-all">
+                <span className="text-xs font-semibold">0</span>
+              </div>
+            </div>
+            <span
+              className="text-lg cursor-pointer"
+              onClick={() => setOpenMenu(true)}
+          
+            >
+              <i className="ri-menu-3-line"></i>
+            </span>
+          </div>
+        </nav>
       )}
 
       {openMenu && (
@@ -52,7 +52,9 @@ const Navbar = () => {
               </a>
             </li>
             <li className="py-4">
-              <a href="#about" className="hover:underline"></a>
+              <a href="#about" className="hover:underline">
+                My carrer so far
+              </a>
             </li>
             <li className="py-4">
               <a href="#services" className="hover:underline">
