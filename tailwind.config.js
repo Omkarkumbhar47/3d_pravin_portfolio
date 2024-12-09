@@ -3,6 +3,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        baskerville: ['Baskerville', 'serif'],
+      },
+      fontFamily: {
+        baskerville: ['Baskerville', 'serif'],
+      },
       colors: {
         white: {
           DEFAULT: "#ffffff",

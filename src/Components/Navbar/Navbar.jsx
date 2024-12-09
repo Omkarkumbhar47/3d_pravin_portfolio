@@ -1,44 +1,68 @@
 import { useState } from "react";
-import HamburgerMenu from "./HamburgerMenu";
+
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className="relative">
-      <nav className="z-10 px-24 py-12 flex absolute tracking-wider justify-between uppercase items-center w-full">
-        <div className="whitespace-nowrap text-[0.50rem]">Scroll Down</div>
-        <div className="text-center z-50">
-          Pradip
-          <br />
-          Kamble
+    <div className="fixed inset-0">
+      <div className="fixed text-2xl top-7 left-1/2 transform -translate-x-1/2 z-50 text-center tracking-wider uppercase">
+        Pradip
+        <br />
+        Kamble
+      </div>
+
+      {!openMenu && (
+    <nav className="fixed top-0 left-0 z-10 w-full flex justify-between items-center px-6 sm:px-12 md:px-24 pt-12 tracking-wider uppercase">
+    <div className="whitespace-nowrap text-[0.60rem]">Scroll Down</div>
+    <div className="flex gap-4 sm:gap-8 items-center">
+      <div className="flex items-center gap-2">
+        <span>Favorite</span>
+        <div className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-600 hover:bg-white hover:text-black transition-all">
+          <span className="text-xs font-semibold">0</span>
         </div>
-        <button onClick={() => setOpenMenu(true)}>
-          <HamburgerMenu />
-        </button>
-      </nav>
+      </div>
+      <span
+        className="text-lg cursor-pointer"
+        onClick={() => setOpenMenu(true)}
+      >
+        <i className="ri-menu-3-line"></i>
+      </span>
+    </div>
+  </nav>
+  
+      )}
 
       {openMenu && (
-        <div className="fixed inset-0 w-full  bg-opacity-70 backdrop-blur-sm flex flex-col h-screen z-40">
-          <button
+        <div
+          className="fixed inset-0 bg-opacity-70 bg-[#152632]  backdrop-blur-xl
+         flex-col z-40"
+        >
+          <span
             onClick={() => setOpenMenu(false)}
-            className="absolute top-14 right-24  text-4xl"
+            className="absolute top-12 right-24 text-xl cursor-pointer"
           >
-            ×
-          </button>
+            <i className="ri-close-fill"></i>
+          </span>
 
-          <ul className="mt-44 absolute  w-fit mx-64 text-6xl font-semibold bg-[#15263218]">
-            <div className="relative text-xs opacity-40">Menu</div>
-            <li className=" py-8">
-              <a href="#home">Pradip Kamble</a>
+          <ul className="mt-44 mx-64 text-6xl font-semibold  px-4 py-8">
+            <div className="text-xs opacity-40 mb-4">Menu</div>
+            <li className="py-4">
+              <a href="#home" className="hover:underline">
+                Pradip Kamble
+              </a>
             </li>
-            <li className="py-8">
-              <a href="#about">About Me</a>
+            <li className="py-4">
+              <a href="#about" className="hover:underline"></a>
             </li>
-            <li className="py-8">
-              <a href="#services">Gallery</a>
+            <li className="py-4">
+              <a href="#services" className="hover:underline">
+                Gallery
+              </a>
             </li>
-            <li className="py-8">
-              <a href="#contact">Contact Me</a>
+            <li className="py-4">
+              <a href="#contact" className="hover:underline">
+                Contact Me
+              </a>
             </li>
           </ul>
         </div>
@@ -46,4 +70,5 @@ const Navbar = () => {
     </div>
   );
 };
+
 export default Navbar;

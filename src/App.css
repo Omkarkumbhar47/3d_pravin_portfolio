@@ -1,13 +1,26 @@
-/* @font-face {
-  font-family: ;
-  src: url();
-} */
+@font-face {
+  font-family: 'Baskerville';
+  src: url('./assets/fonts/Baskerville.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BaskervilleItalic';
+  src: url('./assets/fonts/BaskervilleItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   font-family: Apercu Pro;
+  align-items: center;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 html,body {
   width: 100%;
@@ -16,4 +29,9 @@ html,body {
   padding: 0;
   background-color: #152632;
   color: #ffffff;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
 }
