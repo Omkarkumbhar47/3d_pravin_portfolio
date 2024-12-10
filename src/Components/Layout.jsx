@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import { NavLink } from "react-router-dom";
-import Hero from "./Navbar/Hero";
+import Hero from "./Hero.jsx";
 import CardSvg from "../assets/svg/CardSvg.jsx";
 
 const Layout = () => {
@@ -15,6 +15,7 @@ const Layout = () => {
       >
         <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
         <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
+
         <Hero />
       </div>
     </>
