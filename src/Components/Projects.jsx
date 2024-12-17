@@ -151,8 +151,8 @@ const Projects = () => {
           <div className="flex justify-between sm:items-center">
             <div className="flex flex-col space-y-2 ">
               <div className="flex items-center">
-                <p className="w-10 sm:w-14 opacity-40 ApercuProMono text-xs">
-                  Cards:
+                <p className=" opacity-40 ApercuProMono text-xs">
+                  Projects:
                 </p>
                 <p className="ApercuProMono text-xs">
                   <span className="">
@@ -161,14 +161,14 @@ const Projects = () => {
                   /<span className="">{cardsTotal}</span>
                 </p>
               </div>
-              <div className="flex justify-start items-center">
+              {/* <div className="flex justify-start items-center">
                 <p className="w-10 sm:w-14 opacity-40 ApercuProMono text-xs">
                   Total:
                 </p>
                 <p className="ApercuProMono text-xs">
                   {calculatePercentage()}%
                 </p>
-              </div>
+              </div> */}
             </div>
 
             {/* Placeholder for "Share your journey" button (uncomment if needed) */}

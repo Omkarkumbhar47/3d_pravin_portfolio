@@ -47,22 +47,29 @@ const Hero = () => {
       {/* <div className="min-h-[75%] pt-32">
         <video controls autoPlay loop src={VideoModel} type="video/mp4"></video>
       </div> */}
-      <div className="w-full mt-28 flex justify-center">
+      <div className="w-full mt-28 flex justify-center bg-red-200 z-50  ">
         <div
-          className={` transition-opacity duration-500 ${
+          className={`transition-opacity duration-500 ${
             isTransitioning ? "opacity-0" : "opacity-100"
           }`}
         >
-          <video
-            id="carousel-video"
-            className="w-full max-w-4xl rounded-md shadow-lg"
-            src={videoSources[currentVideoIndex]}
-            autoPlay
-            loop={false}
-            muted
-            playsInline
-            onEnded={handleVideoEnd}
-          />
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7269601696081678336?compact=1"
+            height="399"
+            className="w-full max-w-4xl"
+            title="LinkedIn embedded post about updates"
+          ></iframe>
+          {/* Video carousel (uncomment and handle sources if needed) */}
+          {/* <video
+      id="carousel-video"
+      className="w-full max-w-4xl rounded-md shadow-lg"
+      src={videoSources[currentVideoIndex]}
+      autoPlay
+      loop={false}
+      muted
+      playsInline
+      onEnded={handleVideoEnd}
+    /> */}
         </div>
       </div>
     </div>
