@@ -19,59 +19,27 @@ const Hero = () => {
   };
 
   return (
-    <div className="h-screen">
-      {/* <div className="Baskerville text-4xl sm:text-5xl md:text-6xl lg:text-6xl mt-60 mx-40 leading-12 text-center capitalize">
-        {/* Explore the artistry of detailed 3D modeling, immersive animations, and
-        captivating visual designs that tell your story */}
-      {/* Bringing <span className="BaskervilleItalic">Imagination</span><br />to Life in 3D
-      </div> */}
-      <div className="relative ">
-        <div className="absolute inset-0 flex justify-center items-center">
-          <img
-            src={HeroBackImg}
-            alt="Background"
-            className="w-[calc(420/720*100%)] max-w-lg opacity-20 md:opacity-40"
-          />
-        </div>
-        <div className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl mx-8 sm:mx-20 md:mx-40 mt-40 sm:mt-60 text-center capitalize leading-snug">
-          Explore the artistry of detailed 3D
-          <br />
-          modeling, immersive animations, and
-          <br />
-          captivating visual designs that tell your
-          <br />
-          story
-        </div>
+    <div className="h-screen relative">
+      <div className=" text-3xl sm:text-4xl md:text-5xl inset-0 lg:text-6xl mx-8 sm:mx-20 md:mx-40 mt-40 sm:mt-60 text-center capitalize leading-snug">
+        Explore the artistry of detailed 3D
+        <br />
+        modeling, immersive animations, and
+        <br />
+        captivating visual designs that tell your
+        <br />
+        story
       </div>
+      {/* <div className="absolute w-fit h-fit  flex justify-center items-center"> */}
+        {/* <img
+          src={HeroBackImg}
+          alt="Background"
+          className="w-[calc(420/720*100%)] max-w-lg opacity-20 md:opacity-40"
+        />
+      </div> */}
+      
 
-      {/* <div className="min-h-[75%] pt-32">
-        <video controls autoPlay loop src={VideoModel} type="video/mp4"></video>
-      </div> */}
-      <div className="w-full mt-28 flex justify-center bg-red-200 z-50  ">
-        <div
-          className={`transition-opacity duration-500 ${
-            isTransitioning ? "opacity-0" : "opacity-100"
-          }`}
-        >
-          <iframe
-            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7269601696081678336?compact=1"
-            height="399"
-            className="w-full max-w-4xl"
-            title="LinkedIn embedded post about updates"
-          ></iframe>
-          {/* Video carousel (uncomment and handle sources if needed) */}
-          {/* <video
-      id="carousel-video"
-      className="w-full max-w-4xl rounded-md shadow-lg"
-      src={videoSources[currentVideoIndex]}
-      autoPlay
-      loop={false}
-      muted
-      playsInline
-      onEnded={handleVideoEnd}
-    /> */}
-        </div>
-      </div>
+    
+    
     </div>
   );
 };

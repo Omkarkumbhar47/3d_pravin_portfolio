@@ -5,7 +5,7 @@ const Navbar = ({openMenu, setOpenMenu}) => {
 
   return (
     <div className="fixed inset-0">
-      <div className="fixed text-2xl top-7 left-1/2 transform -translate-x-1/2 z-50 text-center tracking-wider uppercase">
+      <div className="fixed text-2xl top-7 left-1/2 transform -translate-x-1/2 z-50 text-center tracking-wider uppercase mix-blend-difference">
         Pradip
         <br />
         Kamble
