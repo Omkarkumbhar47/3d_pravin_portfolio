@@ -10,13 +10,14 @@ const Layout = () => {
     <>
       <div
         className={`w-full h-screen px-24 realtive ${
-          openMenu ? "overflow-hidden" : ""
+          openMenu ? "overflow-hidden  " : ""
         }`}
       >
         <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
         <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
-
-        <Hero />
+        <div className="w-[90%] m-auto">
+          <Hero />
+        </div>
       </div>
     </>
   );

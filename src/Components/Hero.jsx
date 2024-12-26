@@ -19,28 +19,23 @@ const Hero = () => {
   };
 
   return (
-    <div className="h-screen relative">
-      <div className=" text-3xl sm:text-4xl md:text-5xl inset-0 lg:text-6xl mx-8 sm:mx-20 md:mx-40 mt-40 sm:mt-60 text-center capitalize leading-snug">
-        Explore the artistry of detailed 3D
-        <br />
-        modeling, immersive animations, and
-        <br />
-        captivating visual designs that tell your
-        <br />
-        story
+    <>
+      <div className="mt-36 sm:mt-30 text-center flex gap-3 "> 
+        <div className="bg-black h-[75vh] w-full">hii i am pravin</div>
+        <div className="bg-transparent h-[75vh] shadow-md shadow-slate-400 h-screen w-full justify-center">Canvas</div>
       </div>
-      {/* <div className="absolute w-fit h-fit  flex justify-center items-center"> */}
-        {/* <img
+      <div className="sm:text-4xl md:text-5xl lg:text-6xl inset-0 mt-40 sm:mt-60 text-center capitalize leading-snug">
+        Explore the artistry of detailed 3D modeling, immersive animations, and
+        captivating visual designs that tell your story
+      </div>
+      {/* <div className="absolute w-fit h-fit  flex justify-center items-center">
+      <img
           src={HeroBackImg}
           alt="Background"
           className="w-[calc(420/720*100%)] max-w-lg opacity-20 md:opacity-40"
         />
       </div> */}
-      
-
-    
-    
-    </div>
+    </>
   );
 };
 
