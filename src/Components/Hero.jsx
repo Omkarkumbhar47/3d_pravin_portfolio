@@ -3,6 +3,9 @@ import video1 from "../assets/video/3dmodelVideo.mp4";
 import video2 from "../assets/video/3dmodelVideo.mp4";
 // import video3 from "../../assets/video/3dmodelVideo1.mp4";
 import HeroBackImg from "../assets/img/HeroImg.png";
+// import MarathiToEnglish from "./MarathiToEnglish";
+import config from '../utils/config.json';
+import { DecoderText } from "./DecoderText";
 const Hero = () => {
   const videoSources = [video1, video2];
   const [currentVideoIndex, setCurrentVideoIndex] = React.useState(0);
@@ -20,9 +23,22 @@ const Hero = () => {
 
   return (
     <>
-      <div className="mt-36 sm:mt-30 text-center flex gap-3 "> 
-        <div className="bg-black h-[75vh] w-full">hii i am pravin</div>
-        <div className="bg-transparent h-[75vh] shadow-md shadow-slate-400 h-screen w-full justify-center">Canvas</div>
+      <div className="mt-36 sm:mt-30 text-center flex gap-3 ">
+        <div className="bg-black h-[75vh] w-full">
+          {/* <h1>Hi, I am Pravin</h1> */}
+          {/* <h1>3d Artist</h1> */}
+          {/* <DecoderText text="Hi, I am Pravin" speed={100} /
+          > */}
+          <DecoderText text={config.name} delay={500} />
+          <p>
+            I am a Front-End / Full-Stack Developer. I am currently working at
+            CloudStok Technologies as a Front-End Developer
+          </p>
+          <div><span>social media</span></div>
+        </div>
+        <div className="bg-transparent h-[75vh] shadow-md shadow-slate-400 w-full justify-center">
+          Canvas
+        </div>
       </div>
       <div className="sm:text-4xl md:text-5xl lg:text-6xl inset-0 mt-40 sm:mt-60 text-center capitalize leading-snug">
         Explore the artistry of detailed 3D modeling, immersive animations, and
