@@ -23,7 +23,9 @@ const Hero = () => {
   return (
     <>
       <div className="mt-36 sm:mt-30  flex gap-6 ">
-        {/* <SecButton  /> */}
+        <div className="absolute bottom-0 left-2/4 my-1">
+          <SecButton />
+        </div>
         <div className="h-[75vh] w-full pt-6">
           <h1 className="font-semibold text-6xl">Hi, I am Pravin</h1>
           <h1 className="font-semibold text-6xl">3d Artist</h1>
