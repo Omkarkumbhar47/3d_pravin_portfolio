@@ -17,6 +17,7 @@ const Layout = () => {
         <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
         <div className="w-[90%] m-auto">
           <Hero />
+          {/* <SecButton/> */}
         </div>
       </div>
     </>
