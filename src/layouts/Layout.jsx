@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/Navbar/Navbar.jsx";
 import { NavLink } from "react-router-dom";
 import Hero from "../pages/Hero.jsx";
@@ -6,8 +6,37 @@ import CardSvg from "../assets/svg/CardSvg.jsx";
 import { motion } from "framer-motion";
 import Detail from "../pages/Detail.jsx";
 import Experience from "../pages/Experience.jsx";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 const Layout = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const scrollRef = useRef(null); // Ref for Locomotive Scroll
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current, // Attach Locomotive Scroll to the container
+      smooth: true, // Enable smooth scrolling
+      lerp: 0.1, // Adjust the scrolling speed
+      smartphone: {
+        smooth: true, // Smooth scrolling on smartphones
+      },
+      tablet: {
+        smooth: true, // Smooth scrolling on tablets
+      },
+    });
+
+    // Update scroll when DOM changes
+    const resizeObserver = new ResizeObserver(() => {
+      scroll.update();
+    });
+    resizeObserver.observe(scrollRef.current);
+
+    // Cleanup on component unmount
+    return () => {
+      scroll.destroy();
+      resizeObserver.disconnect();
+    };
+  }, []);
   return (
     <>
       <div
@@ -15,13 +44,18 @@ const Layout = () => {
           openMenu ? "overflow-hidden  " : ""
         }`}
       >
-        <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
-        <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
-        <div className="w-[90%] m-auto">
-          <Hero />
-          <Detail/>
-          <Experience/>
-          {/* <SecButton/> */}
+         <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
+        <div  
+        ref={scrollRef} // Attach the scrollRef here
+        >
+         
+          <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
+          <div className="w-[90%] m-auto">
+            <Hero />
+            <Detail />
+            <Experience />
+            {/* <SecButton/> */}
+          </div>
         </div>
       </div>
     </>

@@ -1,13 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import moduleName from "../assets/img/HeroImg.png";
-
+import { motion, useInView } from "framer-motion";
 const ProjectCard = ({ id, title, subtitle, image, link }) => {
-  
-    
   return (
     <div className="relative">
-     
       <a
         href={link}
         target="_blank"
@@ -119,16 +116,25 @@ const Projects = () => {
       link: "",
     },
   ];
-    // Sample data
-    const cardsCompleted = 10;
-    const cardsTotal = 29;
-  
-    const calculatePercentage = () => {
-      return ((cardsCompleted / cardsTotal) * 100).toFixed(0);
-    };
-    const navigate = useNavigate();
+  // Sample data
+  const cardsCompleted = 10;
+  const cardsTotal = 29;
+
+  const calculatePercentage = () => {
+    return ((cardsCompleted / cardsTotal) * 100).toFixed(0);
+  };
+  const navigate = useNavigate();
   const handleGpBack = () => {
     navigate(-1);
+  };
+
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: false });
+
+  const fadeInUP = {
+    hidden: { y: 100, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.8 } },
+    exit: { y: 100, opacity: 0, transition: { duration: 0.8 } },
   };
 
   return (
@@ -147,13 +153,11 @@ const Projects = () => {
 
       <div className="bg-white m-6 text-black">
         <div className="px-5 pt-6 md:px-10">
-          {/* Stats Section */}
+          {/* Stats Section */}``
           <div className="flex justify-between sm:items-center">
             <div className="flex flex-col space-y-2 ">
               <div className="flex items-center">
-                <p className=" opacity-40 ApercuProMono text-xs">
-                  Projects:
-                </p>
+                <p className=" opacity-40 ApercuProMono text-xs">Projects:</p>
                 <p className="ApercuProMono text-xs">
                   <span className="">
                     {cardsCompleted.toString().padStart(2, "0")}
@@ -185,10 +189,16 @@ const Projects = () => {
                   My journey
                 </div>
               </span>
-              <p className="heading text-2xl pt-2 w-full lg:w-[75%] xl:w-[51%] Baskerville md:text-5xl">
+              <motion.p
+                ref={ref}
+                variants={fadeInUP}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                className="heading text-2xl pt-2 w-full lg:w-[75%] xl:w-[51%] Baskerville md:text-5xl"
+              >
                 This is my journey so far, and there are so many more
                 <span className="BaskervilleItalic"> project</span> to meet!
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
