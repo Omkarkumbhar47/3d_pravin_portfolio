@@ -31,7 +31,7 @@ const Navbar = ({ openMenu, setOpenMenu }) => {
 
       {openMenu && (
         <div
-          className="fixed inset-0 bg-opacity-90 bg-[#152632]  backdrop-blur-4xl flex-col z-40"
+          className=" overflow-hidden z-[999] fixed inset-0 bg-opacity-90 bg-[#152632]  backdrop-blur-4xl flex-col"
         >
           <span
             onClick={() => setOpenMenu(false)}

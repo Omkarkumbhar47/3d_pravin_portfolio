@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { marker } from "framer-motion/client";
+import video1 from "../assets/video/1730899968326.mp4";
 
 const Detail = () => {
   const ref = useRef(null);
@@ -28,9 +29,10 @@ const Detail = () => {
         autoPlay
         muted
         loop
-        src="../assets/video/3dmodelVideo.mp4"
+        src={video1}
         className="w-10/12 bg-black m-auto my-20"
-      ></video>
+      ><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7259920672175357952" height="499" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></video>
+      
     </div>
   );
 };
