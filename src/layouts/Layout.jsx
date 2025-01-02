@@ -3,7 +3,9 @@ import Navbar from "../Components/Navbar/Navbar.jsx";
 import { NavLink } from "react-router-dom";
 import Hero from "../pages/Hero.jsx";
 import CardSvg from "../assets/svg/CardSvg.jsx";
-
+import { motion } from "framer-motion";
+import Detail from "../pages/Detail.jsx";
+import Experience from "../pages/Experience.jsx";
 const Layout = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
@@ -17,6 +19,8 @@ const Layout = () => {
         <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
         <div className="w-[90%] m-auto">
           <Hero />
+          <Detail/>
+          <Experience/>
           {/* <SecButton/> */}
         </div>
       </div>
