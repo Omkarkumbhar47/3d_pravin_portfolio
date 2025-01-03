@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const Navbar = ({ openMenu, setOpenMenu }) => {
   return (
-    <div className="fixed inset-0 h-[100px]">
-      <div className="fixed text-2xl top-7 left-1/2 transform -translate-x-1/2 z-50 text-center tracking-wider uppercase mix-blend-difference">
+    <div className="fixed inset-0 h-[100px] menu">
+      <div className="fixed z-[9999] text-2xl top-7 left-1/2 transform -translate-x-1/2 text-center tracking-wider uppercase mix-blend-difference">
         Pradip
         <br />
         Kamble

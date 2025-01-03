@@ -81,4 +81,7 @@
   /* *::-webkit-scrollbar {
     display: none;
   } */
+  .menu {
+    z-index: 9998; /* Ensure it is the highest */
+  }
   

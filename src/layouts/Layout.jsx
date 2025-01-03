@@ -40,17 +40,17 @@ const Layout = () => {
   return (
     <>
       <div
-        className={`w-full h-screen px-24 realtive ${
+        className={`w-full px-24 relative ${
           openMenu ? "overflow-hidden  " : ""
         }`}
       >
          <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
+         <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
         <div  
         ref={scrollRef} // Attach the scrollRef here
         >
          
-          <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
-          <div className="w-[90%] m-auto">
+          <div className="w-[90%] m-auto h-fit">
             <Hero />
             <Detail />
             <Experience />
