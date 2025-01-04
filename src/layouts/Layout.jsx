@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar/Navbar.jsx";
 import { NavLink } from "react-router-dom";
 import Hero from "../pages/Hero.jsx";
 import CardSvg from "../assets/svg/CardSvg.jsx";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Detail from "../pages/Detail.jsx";
 import Experience from "../pages/Experience.jsx";
 import LocomotiveScroll from "locomotive-scroll";
@@ -37,6 +37,7 @@ const Layout = () => {
       resizeObserver.disconnect();
     };
   }, []);
+  console.log(scrollRef.onscroll );
   return (
     <>
       <div
@@ -44,16 +45,17 @@ const Layout = () => {
           openMenu ? "overflow-hidden  " : ""
         }`}
       >
-         <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
-         <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
-        <div  
-        ref={scrollRef} // Attach the scrollRef here
+        <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
+        <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
+        <div
+          ref={scrollRef} // Attach the scrollRef here
         >
-         
-          <div className="w-[90%] m-auto h-fit">
+          <div className=" w-[90%] m-auto h-auto">
             <Hero />
             <Detail />
+
             <Experience />
+            <div className="h-[200px] bg-white-100"></div>
             {/* <SecButton/> */}
           </div>
         </div>
