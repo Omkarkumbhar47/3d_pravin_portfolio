@@ -11,7 +11,7 @@ const Navbar = ({ openMenu, setOpenMenu }) => {
 
       {!openMenu && (
         <nav className="fixed top-0 left-0 z-10 w-full flex justify-between items-center px-6 sm:px-12 md:px-24 pt-12 tracking-wider uppercase">
-          <div className="whitespace-nowrap text-[0.60rem]">Scroll Down</div>
+          <div className="whitespace-nowrap text-[0.60rem] pl-4">Scroll Down</div>
           <div className="flex gap-4 sm:gap-8 items-center">
             <div className="flex items-center gap-2">
               <span>Favorite</span>

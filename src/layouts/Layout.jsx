@@ -8,9 +8,11 @@ import Detail from "../pages/Detail.jsx";
 import Experience from "../pages/Experience.jsx";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import Footer from "../Components/Footer.jsx";
 const Layout = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const scrollRef = useRef(null); // Ref for Locomotive Scroll
+  const [scrollProgress, setScrollProgress] = useState(0); // State for scroll progress
 
   useEffect(() => {
     const scroll = new LocomotiveScroll({
@@ -31,13 +33,20 @@ const Layout = () => {
     });
     resizeObserver.observe(scrollRef.current);
 
+    // Listen to scroll events
+    scroll.on("scroll", (instance) => {
+      const progress = instance.scroll.y / instance.limit.y; // Use y-axis values
+      setScrollProgress(progress); // Update state
+    });
+    
+
     // Cleanup on component unmount
     return () => {
       scroll.destroy();
       resizeObserver.disconnect();
     };
   }, []);
-  console.log(scrollRef.onscroll );
+  // console.log(scrollProgress);
   return (
     <>
       <div
@@ -50,12 +59,22 @@ const Layout = () => {
         <div
           ref={scrollRef} // Attach the scrollRef here
         >
+          <div className=" bg-[#ff0088] w-[8px] top-0 bottom-0 fixed rounded-full">
+            <motion.div
+              // className="bg-purple-300 m-auto rounded-full"
+              className="bg-white m-auto rounded-full"
+              // className="bg-[#f854ab]  m-auto rounded-full border border-purple-300"
+              style={{
+                height: `${scrollProgress * 100}%`, // Adjust height dynamically
+              }}
+            ></motion.div>
+          </div>
           <div className=" w-[90%] m-auto h-auto">
             <Hero />
             <Detail />
 
             <Experience />
-            <div className="h-[200px] bg-white-100"></div>
+            <Footer />
             {/* <SecButton/> */}
           </div>
         </div>

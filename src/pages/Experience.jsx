@@ -10,7 +10,7 @@ export default function ScrollLinked() {
 
   return (
     <>
-      <motion.div 
+      {/* <motion.div 
       className="overflow-hidden top-0 left-0 bottom-0 w-[10px]"
         id="scroll-indicator"
         style={{
@@ -23,7 +23,7 @@ export default function ScrollLinked() {
           originY: 0,
           backgroundColor: "#ff0088",
         }}
-      />
+      /> */}
     </>
   );
 }
