@@ -20,9 +20,9 @@ const Detail = () => {
         animate={inView ? "visible" : "hidden"}
         className="text-center mx-auto sm:px-4 lg:px-8"
       >
-        <h1 className="sm:text-4xl md:text-5xl lg:text-6xl capitalize leading-snug">
-          Explore the artistry of detailed 3D modeling, immersive animations, and
-          captivating visual designs that tell your story
+        <h1 className="sm:text-3xl md:text-4xl lg:text-5xl w-[80%] m-auto capitalize leading-snug ">
+          Explore the artistry of detailed 3D modeling, immersive animations,
+          and captivating visual designs that tell your story
         </h1>
       </motion.div>
 
