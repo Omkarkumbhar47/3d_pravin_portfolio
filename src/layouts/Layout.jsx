@@ -9,6 +9,7 @@ import Experience from "../pages/Experience.jsx";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import Footer from "../Components/Footer.jsx";
+import Gallery from "../Components/Gallery.jsx";
 const Layout = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const scrollRef = useRef(null); // Ref for Locomotive Scroll
@@ -74,6 +75,7 @@ const Layout = () => {
             <Detail />
 
             <Experience />
+            <Gallery/>
             <Footer />
             {/* <SecButton/> */}
           </div>
