@@ -67,7 +67,7 @@ export default function App() {
         <Environment preset="studio" />
 
         <Bounds fit clip observe margin={2}>
-          <ModelComponent position={[0, 0, 0]} />
+          <ModelComponent position={[0, 0, 0]} /> 
         </Bounds>
 
         <Rig />

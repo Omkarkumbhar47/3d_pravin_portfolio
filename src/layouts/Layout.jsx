@@ -10,6 +10,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import Footer from "../Components/Footer.jsx";
 import Gallery from "../Components/Gallery.jsx";
+import Card from "../Components/Card.jsx";
 const Layout = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const scrollRef = useRef(null); // Ref for Locomotive Scroll
@@ -60,10 +61,10 @@ const Layout = () => {
         <div
           ref={scrollRef} // Attach the scrollRef here
         >
-          <div className=" bg-[#ff0088] w-[8px] top-0 bottom-0 fixed rounded-full">
+          <div className="  bg-[crimson] w-[8px] top-0 bottom-0 fixed rounded-full">
             <motion.div
-              // className="bg-purple-300 m-auto rounded-full"
-              className="bg-white m-auto rounded-full"
+              className="bg-[#ff0088] m-auto rounded-full"
+              // className="bg-white m-auto rounded-full"
               // className="bg-[#f854ab]  m-auto rounded-full border border-purple-300"
               style={{
                 height: `${scrollProgress * 100}%`, // Adjust height dynamically
@@ -71,11 +72,15 @@ const Layout = () => {
             ></motion.div>
           </div>
           <div className=" w-[90%] m-auto h-auto">
-            <Hero />
+            {/* <Hero /> */}
             <Detail />
 
+
+            <Card
+            />
+
             <Experience />
-            <Gallery/>
+            {/* <Gallery/> */}
             <Footer />
             {/* <SecButton/> */}
           </div>
