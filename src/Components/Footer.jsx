@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
             <form className="max-w-sm   ">
               <label
-                for="email"
+                htmlFor="email"
                 className="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
               >
                 React out

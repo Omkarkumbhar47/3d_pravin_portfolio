@@ -11,14 +11,16 @@ const Navbar = ({ openMenu, setOpenMenu }) => {
 
       {!openMenu && (
         <nav className="fixed top-0 left-0 z-10 w-full flex justify-between items-center px-6 sm:px-12 md:px-24 pt-12 tracking-wider uppercase">
-          <div className="whitespace-nowrap text-[0.60rem] pl-4">Scroll Down</div>
+          <div className="whitespace-nowrap text-[0.60rem] pl-4">
+            Scroll Down
+          </div>
           <div className="flex gap-4 sm:gap-8 items-center">
-            <div className="flex items-center gap-2">
-              <span>Favorite</span>
+            <a href="/gallery" className="flex items-center gap-2">
+              <span>Gallery</span>
               <div className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-600 hover:bg-white hover:text-black transition-all">
                 <span className="text-xs font-semibold">0</span>
               </div>
-            </div>
+            </a>
             <span
               className="text-lg cursor-pointer"
               onClick={() => setOpenMenu(true)}
@@ -30,9 +32,7 @@ const Navbar = ({ openMenu, setOpenMenu }) => {
       )}
 
       {openMenu && (
-        <div
-          className=" overflow-hidden z-[999] fixed inset-0 bg-opacity-90 bg-[#152632]  backdrop-blur-4xl flex-col"
-        >
+        <div className=" overflow-hidden z-[999] fixed inset-0 bg-opacity-90 bg-[#152632]  backdrop-blur-4xl flex-col">
           <span
             onClick={() => setOpenMenu(false)}
             className="absolute top-12 right-24 text-xl cursor-pointer"
@@ -65,6 +65,7 @@ const Navbar = ({ openMenu, setOpenMenu }) => {
           </ul>
         </div>
       )}
+      
     </div>
   );
 };

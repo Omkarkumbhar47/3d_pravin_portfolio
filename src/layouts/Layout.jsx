@@ -11,6 +11,7 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import Footer from "../Components/Footer.jsx";
 import Gallery from "../Components/Gallery.jsx";
 import Card from "../Components/Card.jsx";
+import About from "../pages/About.jsx";
 const Layout = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const scrollRef = useRef(null); // Ref for Locomotive Scroll
@@ -40,7 +41,6 @@ const Layout = () => {
       const progress = instance.scroll.y / instance.limit.y; // Use y-axis values
       setScrollProgress(progress); // Update state
     });
-    
 
     // Cleanup on component unmount
     return () => {
@@ -58,26 +58,22 @@ const Layout = () => {
       >
         <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
         <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
-        <div
-          ref={scrollRef} // Attach the scrollRef here
-        >
-          <div className="  bg-[crimson] w-[8px] top-0 bottom-0 fixed rounded-full">
+        <div ref={scrollRef}>
+          <div className="  bg-[#ff0088] w-[8px] top-0 bottom-0 fixed rounded-full">
             <motion.div
-              className="bg-[#ff0088] m-auto rounded-full"
-              // className="bg-white m-auto rounded-full"
-              // className="bg-[#f854ab]  m-auto rounded-full border border-purple-300"
+              className="bg-[#ff81c4] m-auto rounded-full"
               style={{
-                height: `${scrollProgress * 100}%`, // Adjust height dynamically
+                height: `${scrollProgress * 100}%`,
               }}
             ></motion.div>
           </div>
           <div className=" w-[90%] m-auto h-auto">
-            {/* <Hero /> */}
+            <Hero />
             <Detail />
-
-
-            <Card
-            />
+            <div className="py-16 h-screen">
+              <About />
+            </div>
+            <Card />
 
             <Experience />
             {/* <Gallery/> */}
@@ -91,40 +87,3 @@ const Layout = () => {
 };
 
 export default Layout;
-// import { Canvas } from "@react-three/fiber";
-// import { Environment, OrbitControls, ScrollControls } from "@react-three/drei";
-// import MainContainer from "./Components/MainContainer";
-
-{
-  /* Main Content */
-}
-{
-  /* <div className="absolute flex flex-col items-center text-white top-40 left-1/2 transform -translate-x-1/2">
-          <h3 className="masked text-7xl tracking-tighter font-[700]">
-            macbook pro.
-          </h3>
-          <h5>Oh so pro!</h5>
-          <p className="text-center w-3/4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non id fuga
-            eius fugit architecto suscipit obcaecati? Fuga praesentium ipsa beatae
-            quam voluptate molestiae quo assumenda ipsam unde? In, expedita amet!
-          </p>
-        </div> */
-}
-
-{
-  /* Three.js Canvas */
-}
-{
-  /* <Canvas camera={{ fov: 20, position: [0, -1, 220] }}>
-          <OrbitControls/>
-          <Environment
-            files={[
-              "https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/4k/studio_small_09_4k.exr",
-            ]}
-          />
-          <ScrollControls pages={3}>
-            <MainContainer />
-          </ScrollControls>
-        </Canvas> */
-}
