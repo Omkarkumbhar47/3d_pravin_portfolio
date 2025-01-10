@@ -66,22 +66,22 @@ const Hero = () => {
             variants={fadeInUp}
           >
             <div className="flex space-x-4">
-              {/* Instagram */}
+              {/* Linkedin */}
               <span className="text-4xl w-12">
                 <i className="ri-instagram-line hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#515BD4] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
               </span>
 
-              {/* Facebook */}
+              {/* Behance */}
               <span className="text-4xl w-12">
                 <i className="ri-facebook-box-fill hover:text-blue-600 hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
               </span>
 
-              {/* Blender */}
+              {/* Instagram */}
               <span className="text-4xl w-12">
                 <i className="ri-blender-line hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#EA7600] hover:to-[#FCA40B] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
               </span>
 
-              {/* Twitter */}
+              {/* Gmail */}
               <span className="text-4xl w-12">
                 <i className="ri-twitter-line hover:text-[#1DA1F2] hover:scale-150
                  hover:cursor-pointer transition-all duration-300"></i>

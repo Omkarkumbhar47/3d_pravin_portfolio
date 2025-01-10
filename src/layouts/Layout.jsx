@@ -12,6 +12,7 @@ import Footer from "../Components/Footer.jsx";
 import Gallery from "../Components/Gallery.jsx";
 import Card from "../Components/Card.jsx";
 import About from "../pages/About.jsx";
+import CallToAction from "../pages/CallToAction.jsx";
 const Layout = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const scrollRef = useRef(null); // Ref for Locomotive Scroll
@@ -59,9 +60,9 @@ const Layout = () => {
         <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
         <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
         <div ref={scrollRef}>
-          <div className="  bg-[#ff0088] w-[8px] top-0 bottom-0 fixed rounded-full">
+          <div className="  bg-[#fff] w-[8px] top-0 bottom-0 fixed rounded-full">
             <motion.div
-              className="bg-[#ff81c4] m-auto rounded-full"
+              className="bg-[#ff0088] m-auto rounded-full"
               style={{
                 height: `${scrollProgress * 100}%`,
               }}
@@ -75,6 +76,7 @@ const Layout = () => {
 
             <Experience />
             {/* <Gallery/> */}
+            <CallToAction/>
             <Footer />
             {/* <SecButton/> */}
           </div>

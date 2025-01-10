@@ -46,7 +46,7 @@ const Card = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-3 gap-8 py-16 items-center">
+    <div className="grid grid-cols-3 gap-8 items-center bg-gradient-to-r from-gray-800 to-gray-900 text-white py-16 px-8">
       <div className="col-span-1 text-6xl font-bold ml-10">
         <h1 className="text-white leading-tight">PREMIUM</h1>
         {/* <h1 className="text-white leading-tight">Top-Tier Tools for</h1> */}

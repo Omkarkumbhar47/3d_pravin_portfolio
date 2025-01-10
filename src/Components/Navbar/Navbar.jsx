@@ -44,7 +44,7 @@ const Navbar = ({ openMenu, setOpenMenu }) => {
             <div className="text-xs opacity-40 mb-4">Menu</div>
             <li className="py-4">
               <a href="#home" className="hover:underline">
-                Pradip Kamble
+                Pravin Kamble
               </a>
             </li>
             <li className="py-4">
