@@ -70,9 +70,7 @@ const Layout = () => {
           <div className=" w-[90%] m-auto h-auto">
             <Hero />
             <Detail />
-            <div className="py-16 h-screen">
-              <About />
-            </div>
+            <About />
             <Card />
 
             <Experience />

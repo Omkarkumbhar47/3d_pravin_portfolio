@@ -1,24 +1,49 @@
 import React from "react";
-import blender from "../assets/img/blender_icon_64x64.png";
-// import maya from "../assets/img/maya_icon_64x64.png";
-// import zbrush from "../assets/img/zbrush_icon_64x64.png";
-// import substance from "../assets/img/substance_icon_64x64.png";
-// import unity from "../assets/img/unity_icon_64x64.png";
-// import unreal from "../assets/img/unreal_icon_64x64.png";
+import blenderIcon from "../assets/img/blender_icon_64x64.png";
+import mayaIcon from "../assets/img/maya-logo.png";
+import photoshopIcon from "../assets/img/Adobe_Photoshop_CC_icon.svg.png";
+import afterEffectsIcon from "../assets/img/adobe-after-effects-logo.svg";
+// import storyboardingIcon from "";
+import clayModelingIcon from "../assets/img/clay model.webp";
+import premiereProIcon from "../assets/img/Adobe_Premiere_Pro_CC_icon.svg.png";
 
 const Card = () => {
   const tools = [
-    { name: "Blender", description: "Create Models", icon: blender },
-    { name: "Blender", description: "Create Models", icon: blender },
-    { name: "Blender", description: "Create Models", icon: blender },
-    { name: "Blender", description: "Create Models", icon: blender },
-    { name: "Blender", description: "Create Models", icon: blender },
-    { name: "Blender", description: "Create Models", icon: blender }, 
-    // { name: "Maya", description: "3D Animation", icon: maya },
-    // { name: "ZBrush", description: "Sculpting Tool", icon: zbrush },
-    // { name: "Substance Painter", description: "Texturing", icon: substance },
-    // { name: "Unity", description: "Game Development", icon: unity },
-    // { name: "Unreal Engine", description: "Game Development", icon: unreal },
+    {
+      name: "Blender",
+      description: "3D Modeling, Animation & Rendering",
+      icon: blenderIcon,
+    },
+    {
+      name: "Autodesk Maya",
+      description: "Animation & Visual Effects",
+      icon: mayaIcon,
+    },
+    {
+      name: "Photoshop",
+      description: "Graphic Design & Image Editing",
+      icon: photoshopIcon,
+    },
+    {
+      name: "After Effects",
+      description: "Motion Graphics & Visual Effects",
+      icon: afterEffectsIcon,
+    },
+    // {
+    //   name: "Storyboarding",
+    //   description: "Concept Visualization & Scene Design",
+    //   icon: storyboardingIcon,
+    // },
+    {
+      name: "Clay Modeling",
+      description: "Traditional Sculpting & Character Prototyping",
+      icon: clayModelingIcon,
+    },
+    {
+      name: "Premiere Pro",
+      description: "Video Editing & Post-Production",
+      icon: premiereProIcon,
+    },
   ];
   return (
     <div className="grid grid-cols-3 gap-8 py-16 items-center">
