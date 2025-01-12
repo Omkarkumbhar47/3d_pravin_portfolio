@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer";
 
 const images = [
   {
@@ -28,27 +29,28 @@ const images = [
   },
 ];
 
-const Gallery = () => {
-  const [count, setcount] = useState(0);
-
+const Gallery = ({ onCountChange, count }) => {
   useEffect(() => {
-    setcount(images.length);
-  }, [images]);
+    onCountChange(images.length);
+  }, [onCountChange]);
 
   return (
-    <div className="p-20 pt-32 w-[90%] m-auto bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+    <div className="px-20 pt-32 w-[90%] m-auto bg-gradient-to-r from-gray-800 to-gray-900 text-white">
       <Navbar count={count} />
 
-      <div className="container mx-auto p-10 bg-white">
+      <div className="container mx-auto p-10 bg-[#e2d3b4]">
         <div
-          className="flex justify-between text-black
+          className="flex justify-between 
          items-center text-start gap-8 p-4"
         >
           <div className="w-full">
-            <h2 className="text-4xl font-semibold mb-4">Explore My Work</h2>
+            <div className="text-6xl font-bold w-full mb-2  ">Gallery</div>
+            <h2 className="text-4xl font-semibold mb-4 text-black ml-5">
+              Explore My Work & Life
+            </h2>
           </div>
           <div className="w-full">
-            <p className="text-lg  w-[95%] text-justify">
+            <p className="text-lg  w-[95%] text-justify text-[#535250]">
               Here is a collection of some of my most recent projects. From
               intricate 3D models to immersive environments, these works
               showcase my creativity and attention to detail. Feel free to
@@ -70,6 +72,7 @@ const Gallery = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

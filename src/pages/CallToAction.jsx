@@ -2,7 +2,7 @@ import React from "react";
 
 const CallToAction = () => {
   return (
-    <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-16 px-8">
+    <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-12 px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-8">
         {/* Text Section */}
         <div className="space-y-4">

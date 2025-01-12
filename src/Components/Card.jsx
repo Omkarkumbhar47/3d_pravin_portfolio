@@ -56,9 +56,8 @@ const Card = () => {
       </div>
       <div className="col-span-2 p-6  grid grid-cols-1 md:grid-cols-2 gap-4">
         {tools.map((tool, index) => (
-          <a
+          <div
             key={index}
-            href="#"
             className="hover:bg-[#b6b4bd33] rounded-lg py-2 px-4 flex items-center gap-4"
           >
             <img
@@ -72,7 +71,7 @@ const Card = () => {
               </h2>
               <h3 className="text-[#807f86b6]">{tool.description}</h3>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>

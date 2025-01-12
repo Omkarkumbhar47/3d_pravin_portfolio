@@ -22,7 +22,7 @@ const Experience = () => {
                     3D Artist
                   </span>
                   <span className="ml-6 mr-5">|</span>
-                  <a href="#" className="mx-2 font-normal ">
+                  <a href="https://noitavonne.com/" className="mx-2 font-normal ">
                     Noitavonne India, Kolhapur
                   </a>
                 </div>

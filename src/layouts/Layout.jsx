@@ -13,7 +13,7 @@ import Gallery from "../Components/Gallery.jsx";
 import Card from "../Components/Card.jsx";
 import About from "../pages/About.jsx";
 import CallToAction from "../pages/CallToAction.jsx";
-const Layout = () => {
+const Layout = ({ count, children }) => {
   const [openMenu, setOpenMenu] = useState(false);
   const scrollRef = useRef(null); // Ref for Locomotive Scroll
   const [scrollProgress, setScrollProgress] = useState(0); // State for scroll progress
@@ -57,7 +57,8 @@ const Layout = () => {
           openMenu ? "overflow-hidden  " : ""
         }`}
       >
-        <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
+        <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} count={count} />
+        <main>{children}</main>
         <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
         <div ref={scrollRef}>
           <div className="  bg-[#fff] w-[8px] top-0 bottom-0 fixed rounded-full">
@@ -71,13 +72,13 @@ const Layout = () => {
           <div className=" w-[90%] m-auto h-auto">
             {/* <Hero />
             <Detail />
-            <About /> */}
-            <Card />
+            <About />
+            <Card /> */}
 
             <Experience />
-            {/* <Gallery/> */}
-            <CallToAction/>
-            <Footer />
+            <>
+            <CallToAction />
+            <Footer /></>
             {/* <SecButton/> */}
           </div>
         </div>

@@ -55,22 +55,22 @@ const Navbar = ({ openMenu, setOpenMenu, count }) => {
           <ul className="mt-44 mx-64 text-6xl font-semibold  px-4 py-8">
             <div className="text-xs opacity-40 mb-4">Menu</div>
             <li className="py-4">
-              <a href="#home" className="hover:underline">
+              <a href="/" className="hover:underline">
                 Pravin Kamble
               </a>
             </li>
-            <li className="py-4">
+            {/* <li className="py-4">
               <a href="#about" className="hover:underline">
                 My carrer so far
               </a>
-            </li>
+            </li> */}
             <li className="py-4">
-              <a href="#services" className="hover:underline">
+              <a href="/gallery" className="hover:underline">
                 Gallery
               </a>
             </li>
             <li className="py-4">
-              <a href="#contact" className="hover:underline">
+              <a href="/contact" className="hover:underline">
                 Contact Me
               </a>
             </li>
