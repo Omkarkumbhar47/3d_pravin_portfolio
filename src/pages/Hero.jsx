@@ -31,7 +31,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="py-36 sm:py-30 flex gap-6">
+      <div className="py-36 sm:py-30 flex gap-6 ">
         <div className="absolute bottom-0 left-2/4 my-1">
           {/* <SecButton /> */}
         </div>
@@ -126,6 +126,9 @@ const Hero = () => {
         >
           <ThreeD />
         </motion.div>
+      </div>
+      <div className="absolute top-[19%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 -mt-24">
+        <SecButton />
       </div>
     </>
   );

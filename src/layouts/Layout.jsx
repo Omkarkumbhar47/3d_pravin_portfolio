@@ -3,31 +3,30 @@ import Navbar from "../Components/Navbar/Navbar.jsx";
 import { NavLink } from "react-router-dom";
 import Hero from "../pages/Hero.jsx";
 import CardSvg from "../assets/svg/CardSvg.jsx";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import Detail from "../pages/Detail.jsx";
 import Experience from "../pages/Experience.jsx";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import Footer from "../Components/Footer.jsx";
-import Gallery from "../Components/Gallery.jsx";
 import Card from "../Components/Card.jsx";
 import About from "../pages/About.jsx";
 import CallToAction from "../pages/CallToAction.jsx";
 const Layout = ({ count, children }) => {
   const [openMenu, setOpenMenu] = useState(false);
-  const scrollRef = useRef(null); // Ref for Locomotive Scroll
-  const [scrollProgress, setScrollProgress] = useState(0); // State for scroll progress
+  const scrollRef = useRef(null); 
+  const [scrollProgress, setScrollProgress] = useState(0); 
 
   useEffect(() => {
     const scroll = new LocomotiveScroll({
       el: scrollRef.current, // Attach Locomotive Scroll to the container
-      smooth: true, // Enable smooth scrolling
+      smooth: true, 
       lerp: 0.1, // Adjust the scrolling speed
       smartphone: {
-        smooth: true, // Smooth scrolling on smartphones
+        smooth: true, 
       },
       tablet: {
-        smooth: true, // Smooth scrolling on tablets
+        smooth: true, 
       },
     });
 
@@ -43,13 +42,11 @@ const Layout = ({ count, children }) => {
       setScrollProgress(progress); // Update state
     });
 
-    // Cleanup on component unmount
     return () => {
       scroll.destroy();
       resizeObserver.disconnect();
     };
   }, []);
-  // console.log(scrollProgress);
   return (
     <>
       <div
@@ -70,16 +67,13 @@ const Layout = ({ count, children }) => {
             ></motion.div>
           </div>
           <div className=" w-[90%] m-auto h-auto">
-            {/* <Hero />
+            <Hero />
             <Detail />
             <About />
-            <Card /> */}
-
+            <Card />
             <Experience />
-            <>
             <CallToAction />
-            <Footer /></>
-            {/* <SecButton/> */}
+            <Footer />
           </div>
         </div>
       </div>
