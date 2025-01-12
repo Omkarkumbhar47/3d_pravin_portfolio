@@ -1,40 +1,73 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Navbar from "./Navbar/Navbar";
+
+const images = [
+  {
+    src: "https://images.unsplash.com/photo-1719937051157-d3d81cc28e86?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Portrait Image 1",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1735583100223-40a01e52ef0a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Landscape Image 1",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1719937051157-d3d81cc28e86?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Portrait Image 2",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1735707370784-9b3e8dd9e8b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8",
+    alt: "Landscape Image 2",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1736192326255-89d26db112c3?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Portrait Image 3",
+  },
+  {
+    src: "https://plus.unsplash.com/premium_photo-1734549547925-153584e3b1ac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Landscape Image 3",
+  },
+];
 
 const Gallery = () => {
+  const [count, setcount] = useState(0);
+
+  useEffect(() => {
+    setcount(images.length);
+  }, [images]);
+
   return (
-    <div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
-        {/* <!-- Gallery Item -->/ */}
-        <div class="relative group overflow-hidden rounded-lg shadow-lg">
-          {/* <!-- Image -->/ */}
-          <img
-            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-            src="https://via.placeholder.com/300"
-            alt="Gallery Image"
-          />
-          {/* <!-- Overlay --> */}
-          <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            {/* //   <!-- Info --> */}
-            <div class="text-center text-white">
-              <h3 class="text-lg font-bold">Image Title</h3>
-              <p class="text-sm">Description of the image.</p>
-            </div>
+    <div className="p-20 pt-32 w-[90%] m-auto bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+      <Navbar count={count} />
+
+      <div className="container mx-auto p-10 bg-white">
+        <div
+          className="flex justify-between text-black
+         items-center text-start gap-8 p-4"
+        >
+          <div className="w-full">
+            <h2 className="text-4xl font-semibold mb-4">Explore My Work</h2>
+          </div>
+          <div className="w-full">
+            <p className="text-lg  w-[95%] text-justify">
+              Here is a collection of some of my most recent projects. From
+              intricate 3D models to immersive environments, these works
+              showcase my creativity and attention to detail. Feel free to
+              explore and discover more about my design and artistic journey.
+            </p>
           </div>
         </div>
-
-        {/* <!-- Add more items as needed --> */}
-        <div class="relative group overflow-hidden rounded-lg shadow-lg">
-          <img
-            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-            src="https://via.placeholder.com/300"
-            alt="Gallery Image"
-          />
-          <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <div class="text-center text-white">
-              <h3 class="text-lg font-bold">Image Title</h3>
-              <p class="text-sm">Description of the image.</p>
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 p-4">
+          {images.map((image, index) => (
+            <div key={index} className="mb-8 break-inside-avoid">
+              <div className="relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 5 hover:shadow-xl">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full object-cover hover:scale-105 transition-all duration-300 ease-in-out"
+                />
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

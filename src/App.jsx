@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./layouts/Layout.jsx";
 import Projects from "./pages/Projects.jsx";
 import Gallery from "./Components/Gallery.jsx";
+import ContactUs from "./pages/ContactUs.jsx";
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/gallery" elements={<Gallery />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>
   );

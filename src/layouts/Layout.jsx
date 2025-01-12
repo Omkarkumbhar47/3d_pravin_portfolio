@@ -69,9 +69,9 @@ const Layout = () => {
             ></motion.div>
           </div>
           <div className=" w-[90%] m-auto h-auto">
-            <Hero />
+            {/* <Hero />
             <Detail />
-            <About />
+            <About /> */}
             <Card />
 
             <Experience />
