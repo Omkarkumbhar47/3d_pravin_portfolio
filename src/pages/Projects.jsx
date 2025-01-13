@@ -154,7 +154,7 @@ const Projects = () => {
         href="/"
         className="text-black fixed text-2xl top-7 left-1/2 transform -translate-x-1/2 z-50 text-center tracking-wider uppercase"
       >
-        Pradip
+        Pravin
         <br />
         Kamble
       </a>

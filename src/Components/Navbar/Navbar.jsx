@@ -10,7 +10,7 @@ const Navbar = ({ openMenu, setOpenMenu, count }) => {
   return (
     <div className="fixed inset-0 h-[100px] menu">
       <Link to="/" className="fixed z-[9999] text-2xl top-7 left-1/2 transform -translate-x-1/2 text-center tracking-wider uppercase mix-blend-difference">
-        Pradip
+        Pravin
         <br />
         Kamble
       </Link>
@@ -99,7 +99,7 @@ export default Navbar;
 //       )}
 
 //       <div className="text-2xl text-center tracking-wider uppercase mix-blend-difference">
-//         Pradip
+//         Pravin
 //         <br />
 //         Kamble
 //       </div>
@@ -137,7 +137,7 @@ export default Navbar;
 //             <div className="text-xs opacity-40 mb-4">Menu</div>
 //             <li className="py-4">
 //               <a href="#home" className="hover:underline">
-//                 Pradip Kamble
+//                 Pravin Kamble
 //               </a>
 //             </li>
 //             <li className="py-4">
