@@ -8,6 +8,7 @@ import ContactUs from "./pages/ContactUs.jsx";
 
 const App = () => {
   const [count, setCount] = useState(0);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const handleCountChange = (newCount) => {
     setCount(newCount);
@@ -17,7 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout  count={count}/>} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/gallery" element={<Gallery onCountChange={handleCountChange} count={count}/>} />
+        <Route path="/gallery" element={<Gallery onCountChange={handleCountChange} count={count} setOpenMenu={setOpenMenu} openMenu={openMenu}/>} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>

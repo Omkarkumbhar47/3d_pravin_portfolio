@@ -3,6 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = ({ openMenu, setOpenMenu, count }) => {
   const location = useLocation();
+
+  const handleOpenMenu=()=>{
+    setOpenMenu(true)
+  }
   return (
     <div className="fixed inset-0 h-[100px] menu">
       <Link to="/" className="fixed z-[9999] text-2xl top-7 left-1/2 transform -translate-x-1/2 text-center tracking-wider uppercase mix-blend-difference">
@@ -35,7 +39,7 @@ const Navbar = ({ openMenu, setOpenMenu, count }) => {
             </Link>
             <span
               className="text-lg cursor-pointer"
-              onClick={() => setOpenMenu(true)}
+              onClick={handleOpenMenu}
             >
               <i className="ri-menu-3-line"></i>
             </span>

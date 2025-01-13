@@ -12,21 +12,20 @@ import Footer from "../Components/Footer.jsx";
 import Card from "../Components/Card.jsx";
 import About from "../pages/About.jsx";
 import CallToAction from "../pages/CallToAction.jsx";
-const Layout = ({ count, children }) => {
-  const [openMenu, setOpenMenu] = useState(false);
-  const scrollRef = useRef(null); 
-  const [scrollProgress, setScrollProgress] = useState(0); 
+const Layout = ({ count, children, openMenu, setOpenMenu }) => {
+  const scrollRef = useRef(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const scroll = new LocomotiveScroll({
       el: scrollRef.current, // Attach Locomotive Scroll to the container
-      smooth: true, 
+      smooth: true,
       lerp: 0.1, // Adjust the scrolling speed
       smartphone: {
-        smooth: true, 
+        smooth: true,
       },
       tablet: {
-        smooth: true, 
+        smooth: true,
       },
     });
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer";
+import CardSvg from "../assets/svg/CardSvg";
 
 const images = [
   {
@@ -29,15 +30,15 @@ const images = [
   },
 ];
 
-const Gallery = ({ onCountChange, count }) => {
+const Gallery = ({ onCountChange, count ,openMenu, setOpenMenu }) => {
   useEffect(() => {
     onCountChange(images.length);
   }, [onCountChange]);
 
   return (
     <div className="px-20 pt-32 w-[90%] m-auto bg-gradient-to-r from-gray-800 to-gray-900 text-white">
-      <Navbar count={count} />
-
+      <Navbar count={count} setOpenMenu={setOpenMenu} openMenu={openMenu} />
+      {/* <div className="z-[9999]"><CardSvg/></div> */}
       <div className="container mx-auto p-10 bg-[#e2d3b4]">
         <div
           className="flex justify-between 

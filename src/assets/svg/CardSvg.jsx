@@ -2,7 +2,7 @@ import React from "react";
 
 const CardSvg = () => {
   return (
-    <div className="fixed z-[9999] top-1/2 right-24 transform -translate-y-1/2 rounded-full w-8 h-8 text-xl cursor-pointer flex items-center justify-center bg-gray-600 hover:text-black transition-all">
+    <div className="fixed z-[9996] menu top-1/2 right-24 transform -translate-y-1/2 rounded-full w-8 h-8 text-xl cursor-pointer flex items-center justify-center bg-gray-600 hover:text-black transition-all">
       <div className=" w-full h-full -translate-y-[0.4rem]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
