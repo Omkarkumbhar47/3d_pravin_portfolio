@@ -12,6 +12,7 @@ import Footer from "../Components/Footer.jsx";
 import Card from "../Components/Card.jsx";
 import About from "../pages/About.jsx";
 import CallToAction from "../pages/CallToAction.jsx";
+import Slider from "../Components/Slider.jsx";
 const Layout = ({ count, children, openMenu, setOpenMenu }) => {
   const scrollRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -66,10 +67,11 @@ const Layout = ({ count, children, openMenu, setOpenMenu }) => {
             ></motion.div>
           </div>
           <div className=" w-[90%] m-auto h-auto">
-            <Hero />
-            <Detail />
-            <About />
+            {/* <Hero />
+            <Detail /> */}
+            {/* <About /> */}
             <Card />
+            <Slider/>
             <Experience />
             <CallToAction />
             <Footer />

@@ -1,0 +1,28 @@
+.slider-container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .slick-dots.slick-thumb {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  
+  .slick-dots.slick-thumb img {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+  }
+  
+  .slick-dots.slick-thumb img:hover {
+    border-color: #333;
+  }
+  
+  .slider-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
