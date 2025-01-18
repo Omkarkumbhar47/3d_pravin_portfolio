@@ -29,127 +29,163 @@ const Slider = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null); // For Thumbs Synchronization
 
   return (
-    <div className="w-full">
-      <Swiper
-        className="w-full h-screen"
-        slidesPerView={1}
-        centeredSlides={true}
-        loop={true}
-        spaceBetween={30}
-        navigation
-        pagination={{ clickable: true }}
-        effect="coverflow"
-        autoplay={{
-          delay: 3000, // 3 seconds delay for autoplay
-          disableOnInteraction: false, // keeps autoplay even when user interacts with the slider
-        }}
-        thumbs={{ swiper: thumbsSwiper }} // Link main swiper with thumbs swiper
-        modules={[
-          Navigation,
-          Pagination,
-          Scrollbar,
-          A11y,
-          EffectCoverflow,
-          Autoplay,
-          Thumbs,
-        ]}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-      >
-        <SwiperSlide>
-          <img src={img1} alt="Slide 1" className="w-full object-contain" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={img2} alt="Slide 2" className="w-full object-contain" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={img3} alt="Slide 3" className="w-full object-contain" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={img4} alt="Slide 4" className="w-full object-contain" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={img5} alt="Slide 5" className="w-full object-contain" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={img6} alt="Slide 6" className="w-full object-contain" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={img7} alt="Slide 7" className="w-full object-contain" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={img8} alt="Slide 8" className="w-full object-contain" />
-        </SwiperSlide>
-      </Swiper>
-
-      {/* Thumbs Gallery */}
-      <div className="mx-auto my-4 justify-center flex">
+    <div className="w-full py-10 px-4">
+      {/* Main Slider */}
+      <div className="w-full  max-w-5xl mx-auto rounded-lg  overflow-hidden">
         <Swiper
-          onSwiper={setThumbsSwiper} // Set the thumbs swiper instance
-          spaceBetween={10}
-          slidesPerView={4}
+          className="w-full shadow-lg"
+          slidesPerView={1}
+          centeredSlides={true}
           loop={true}
-          freeMode={true}
-          watchSlidesProgress={true}
-          modules={[Thumbs]}
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          effect="coverflow"
+          autoplay={{
+            delay: 3000, // 3 seconds delay for autoplay
+            disableOnInteraction: false, // keeps autoplay even when user interacts with the slider
+          }}
+          thumbs={{ swiper: thumbsSwiper }} // Link main swiper with thumbs swiper
+          modules={[
+            Navigation,
+            Pagination,
+            Scrollbar,
+            A11y,
+            EffectCoverflow,
+            Autoplay,
+            Thumbs,
+          ]}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
             <img
               src={img1}
-              alt="Thumbnail 1"
-              className="w-30 h-20 object-cover"
+              alt="Slide 1"
+              className="w-fit m-auto object-contain h-[400px]"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={img2}
-              alt="Thumbnail 2"
-              className="w-30 h-20 object-cover"
+              alt="Slide 2"
+              className="w-fit m-auto object-contain h-[400px]"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={img3}
-              alt="Thumbnail 3"
-              className="w-30 h-20 object-cover"
+              alt="Slide 3"
+              className="w-fit m-auto object-contain h-[400px]"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={img4}
-              alt="Thumbnail 4"
-              className="w-30 h-20 object-cover"
+              alt="Slide 4"
+              className="w-fit m-auto object-contain h-[400px]"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={img5}
-              alt="Thumbnail 5"
-              className="w-30 h-20 object-cover"
+              alt="Slide 5"
+              className="w-fit m-auto object-contain h-[400px]"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={img6}
-              alt="Thumbnail 6"
-              className="w-30 h-20 object-cover"
+              alt="Slide 6"
+              className="w-fit m-auto object-contain h-[400px]"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={img7}
-              alt="Thumbnail 7"
-              className="w-30 h-20 object-cover"
+              alt="Slide 7"
+              className="w-fit m-auto object-contain h-[400px]"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={img8}
-              alt="Thumbnail 8"
-              className="w-30 h-20 object-cover"
+              alt="Slide 8"
+              className="w-fit m-auto object-contain h-[400px]"
             />
           </SwiperSlide>
         </Swiper>
+      </div>
+
+      {/* Thumbs Gallery */}
+      <div className="my-6">
+        <div className="w-full max-w-5xl mx-auto flex justify-center items-center p-4 rounded-lg shadow-md">
+          <Swiper
+            onSwiper={setThumbsSwiper} // Set the thumbs swiper instance
+            spaceBetween={10}
+            slidesPerView={4}
+            loop={true}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[Thumbs]}
+          >
+            <SwiperSlide>
+              <img
+                src={img1}
+                alt="Thumbnail 1"
+                className="w-full h-20 object-cover rounded-md shadow-sm"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={img2}
+                alt="Thumbnail 2"
+                className="w-full h-20 object-cover rounded-md shadow-sm"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={img3}
+                alt="Thumbnail 3"
+                className="w-full h-20 object-cover rounded-md shadow-sm"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={img4}
+                alt="Thumbnail 4"
+                className="w-full h-20 object-cover rounded-md shadow-sm"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={img5}
+                alt="Thumbnail 5"
+                className="w-full h-20 object-cover rounded-md shadow-sm"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={img6}
+                alt="Thumbnail 6"
+                className="w-full h-20 object-cover rounded-md shadow-sm"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={img7}
+                alt="Thumbnail 7"
+                className="w-full h-20 object-cover rounded-md shadow-sm"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={img8}
+                alt="Thumbnail 8"
+                className="w-full h-20 object-cover rounded-md shadow-sm"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   );

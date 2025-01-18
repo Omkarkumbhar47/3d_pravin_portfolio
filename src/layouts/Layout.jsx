@@ -67,9 +67,9 @@ const Layout = ({ count, children, openMenu, setOpenMenu }) => {
             ></motion.div>
           </div>
           <div className=" w-[90%] m-auto h-auto">
-            {/* <Hero />
-            <Detail /> */}
-            {/* <About /> */}
+            <Hero />
+            <Detail />
+            <About />
             <Card />
             <Slider/>
             <Experience />
