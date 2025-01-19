@@ -31,6 +31,10 @@ const Slider = () => {
   return (
     <div className="w-full py-10 px-4">
       {/* Main Slider */}
+      <div className="col-span-1 text-6xl font-bold ml-10 py-5 text-center">
+        <h1 className="text-white leading-tight">Captivating</h1>
+        <h1 className="text-[#b6b4bd33]">Moments</h1>
+      </div>
       <div className="w-full  max-w-5xl mx-auto rounded-lg  overflow-hidden">
         <Swiper
           className="w-full shadow-lg"

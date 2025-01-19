@@ -3,11 +3,11 @@ import photo from "../assets/img/pravinImg.jpg";
 const About = () => {
   return (
     <div className="w-full mt-16 h-screen grid grid-cols-2 items-center text-justify justify-center gap-2 px-2 ">
-      <div className="w-full  h-[85%] shadow-lg rounded-lg px-6  justify-center bg-gradient-to-r from-gray-800 to-gray-900 text-white py-16 ">
-        <h2 className="text-6xl font-medium py-6 ">
+      <div className="w-full  h-[85%] shadow-lg rounded-lg   justify-center bg-gradient-to-r from-gray-800 to-gray-900 text-white pt-5 ">
+        <h2 className="text-6xl font-medium p-6  ">
           About <span className="text-indigo-500 ">Me</span>
         </h2>
-        <div className="">
+        <div className="px-10">
           <p className="text-xl  mb-6">
             A passionate
             <strong> 3D Character Artist </strong> from Kolhapur, India. With a

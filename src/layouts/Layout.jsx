@@ -50,7 +50,7 @@ const Layout = ({ count, children, openMenu, setOpenMenu }) => {
   return (
     <>
       <div
-        className={`w-full px-24 relative ${
+        className={`w-full px-4 md:px-24 relative ${
           openMenu ? "overflow-hidden  " : ""
         }`}
       >
@@ -58,7 +58,7 @@ const Layout = ({ count, children, openMenu, setOpenMenu }) => {
         <main>{children}</main>
         <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
         <div ref={scrollRef}>
-          <div className="  bg-[#fff] w-[8px] top-0 bottom-0 fixed rounded-full">
+          <div className="bg-[#fff] w-[8px] top-0 bottom-0 fixed rounded-full hidden md:block">
             <motion.div
               className="bg-[#ff0088] m-auto rounded-full"
               style={{
@@ -66,12 +66,13 @@ const Layout = ({ count, children, openMenu, setOpenMenu }) => {
               }}
             ></motion.div>
           </div>
-          <div className=" w-[90%] m-auto h-auto">
+
+          <div className="md:w-[90%] m-auto h-auto">
             <Hero />
             <Detail />
             <About />
-            <Card />
             <Slider/>
+            <Card />
             <Experience />
             <CallToAction />
             <Footer />

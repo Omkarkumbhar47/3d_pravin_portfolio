@@ -10,7 +10,7 @@ const Button = ({ text, goTo }) => {
         </button> */}
         <button className="custom-button ">
           <span className="button-content">
-            <span className="button-text capitalize text-2xl ">{text}</span>
+            <span className="button-text capitalize text-xl md:text-2xl ">{text}</span>
             <span className="button-icon">→</span>
           </span>
           <span className="button-background"></span>

@@ -31,43 +31,44 @@ const Hero = () => {
 
   return (
     <>
-      <div className="py-36 sm:py-30 flex gap-6 ">
-        <div className="absolute bottom-0 left-2/4 my-1">
-          {/* <SecButton /> */}
-        </div>
+      <div className="py-28 sm:py-30 md:flex gap-1 md:gap-6">
+        <div className="absolute bottom-0 left-2/4 my-1"></div>
         <motion.div
-          className="h-[75vh] w-full pt-6"
+          className="md:h-[75vh]  w-full pt-0 md:pt-6"
           variants={container}
           initial="hidden"
           animate="visible"
         >
           <motion.h1
-            className="font-semibold text-6xl overflow-hidden"
+            className="font-semibold text-4xl md:text-6xl overflow-hidden"
             variants={fadeInUp}
           >
             Hi, I'm Pravin
           </motion.h1>
 
           <motion.h2
-            className="font-semibold text-6xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600"
+            className="font-semibold text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600"
             variants={fadeInUp}
           >
             3D Artist
           </motion.h2>
 
-          <motion.p className="text-3xl mt-5 " variants={fadeInUp}>
+          <motion.p
+            className="text-xl md:text-3xl mt-2 md:mt-5 "
+            variants={fadeInUp}
+          >
             A passionate 3D Artist and Animator specialized in creating stunning
             3D models & captivating animations using Blender. Let’s bring your
             vision to life in 3D!
           </motion.p>
 
           <motion.div
-            className="h-16 mb-5 mt-3 flex gap-6 items-center"
+            className="md:h-16 h-10 mb-2 md:mb-5 mt-1 md:mt-3 flex gap-6 items-center"
             variants={fadeInUp}
           >
-            <div className="flex space-x-4">
+            <div className="flex md:space-x-4 space-x-0">
               {/* LinkedIn */}
-              <span className="text-4xl w-12">
+              <span className="text-2xl md:text-4xl w-12">
                 <a
                   href="https://www.linkedin.com"
                   target="_blank"
@@ -78,7 +79,7 @@ const Hero = () => {
               </span>
 
               {/* Behance */}
-              <span className="text-4xl w-12">
+              <span className="text-2xl md:text-4xl w-12">
                 <a
                   href="https://www.behance.net"
                   target="_blank"
@@ -89,7 +90,7 @@ const Hero = () => {
               </span>
 
               {/* Instagram */}
-              <span className="text-4xl w-12">
+              <span className="text-2xl md:text-4xl w-12">
                 <a
                   href="https://www.instagram.com"
                   target="_blank"
@@ -100,7 +101,7 @@ const Hero = () => {
               </span>
 
               {/* Twitter */}
-              <span className="text-4xl w-12">
+              <span className="text-2xl md:text-4xl w-12">
                 <a
                   href="https://www.twitter.com"
                   target="_blank"
@@ -122,14 +123,14 @@ const Hero = () => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -100, opacity: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="bg-transparent h-[75vh] shadow-md shadow-[#101c26] rounded-full m-auto w-full justify-center"
+          className="bg-transparent h-[50vh] md:h-[75vh] shadow-md shadow-[#101c26] rounded-full m-auto w-full justify-center"
         >
           <ThreeD />
         </motion.div>
       </div>
-      <div className="absolute top-[19%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 -mt-24">
+      {/* <div className="absolute top-[19%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 -mt-24">
         <SecButton />
-      </div>
+      </div> */}
     </>
   );
 };
