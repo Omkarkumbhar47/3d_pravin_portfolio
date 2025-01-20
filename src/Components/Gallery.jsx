@@ -30,28 +30,30 @@ const images = [
   },
 ];
 
-const Gallery = ({ onCountChange, count ,openMenu, setOpenMenu }) => {
+const Gallery = ({ onCountChange, count, openMenu, setOpenMenu }) => {
   useEffect(() => {
     onCountChange(images.length);
   }, [onCountChange]);
 
   return (
-    <div className="px-20 pt-32 w-[90%] m-auto bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+    <div className="px-2 md:px-20 pt-32 w-[95%] md:w-[90%] m-auto bg-gradient-to-r from-gray-800 to-gray-900 text-white">
       <Navbar count={count} setOpenMenu={setOpenMenu} openMenu={openMenu} />
       {/* <div className="z-[9999]"><CardSvg/></div> */}
-      <div className="container mx-auto p-10 bg-[#e2d3b4]">
+      <div className="container mx-auto md:p-10 bg-[#e2d3b4]">
         <div
-          className="flex justify-between 
+          className="md:flex justify-between 
          items-center text-start gap-8 p-4"
         >
           <div className="w-full">
-            <div className="text-6xl font-bold w-full mb-2  ">Gallery</div>
-            <h2 className="text-4xl font-semibold mb-4 text-black ml-5">
+            <div className="text-3xl  md:text-4xl lg:text-6xl font-bold w-full mb-2  ">
+              Gallery
+            </div>
+            <h2 className="text-2xl  md:text-3xl lg:text-4xl font-semibold mb-4 text-black ml-5">
               Explore My Work & Life
             </h2>
           </div>
           <div className="w-full">
-            <p className="text-lg  w-[95%] text-justify text-[#535250]">
+            <p className="text-sm  md:text-md lg:text-lg  w-[95%] text-justify text-[#535250]">
               Here is a collection of some of my most recent projects. From
               intricate 3D models to immersive environments, these works
               showcase my creativity and attention to detail. Feel free to
@@ -59,7 +61,7 @@ const Gallery = ({ onCountChange, count ,openMenu, setOpenMenu }) => {
             </p>
           </div>
         </div>
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 p-4">
+        <div className="columns-1 sm:columns-2 md:columns-3 gap-4 p-4">
           {images.map((image, index) => (
             <div key={index} className="mb-8 break-inside-avoid">
               <div className="relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 5 hover:shadow-xl">

@@ -20,27 +20,30 @@ const ProjectCard = ({ id, title, subtitle, image, modelPath }) => {
     navigate("/viewer", { state: { modelPath } });
   };
   return (
-    <article onClick={handleCardClick} className="relative">
+    <article
+      onClick={handleCardClick}
+      className="relative w-full max-w-[350px] md:max-w-[400px] lg:max-w-[450px] mx-auto"
+    >
       <a
         // href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative bg-[#e2d3b47a] w-full h-full aspect-square
-         rounded-[1.25rem] p-2 card shadow-2xl flex flex-col hover:scale-105 transition-all"
+        className="relative bg-[#e2d3b47a] w-full h-full aspect-square rounded-[1.25rem] p-2 shadow-2xl flex flex-col hover:scale-105 transition-transform"
       >
-        <div className="flex flex-col w-full h-full items-center border p-2 border-black border-dashed rounded-lg relative">
-          <div className="overflow-hidden rounded-lg w-full h-full">
+        <div className="flex flex-col w-full h-full items-center border p-2 border-black border-dashed rounded-lg">
+          <div className="overflow-hidden rounded-lg w-full h-full flex items-center justify-center">
             <img
               src={image}
               alt={`${title} - ${subtitle}`}
-              className="object-cover w-full h-full"
+              className="w-full h-auto max-h-full md:object-cover object-contain"
             />
           </div>
           <div className="w-full text-center mt-4">
-            <h1 className="mt-2 text-2xl">
-              {title} <span className="BaskervilleItalic">{subtitle}</span>
+            <h1 className="mt-2 text-lg md:text-xl lg:text-2xl">
+              {title}{" "}
+              <span className="font-[BaskervilleItalic]">{subtitle}</span>
             </h1>
-            <span className="block text-lg opacity-60">
+            <span className="block text-sm md:text-base lg:text-lg opacity-60">
               {`${id < 10 ? "0" : ""}${id}/29`}
             </span>
           </div>
@@ -196,7 +199,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-8 p-4 pt-8 md:px-10 2xl:px-[6.875rem]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-4 pt-8 md:px-10 2xl:px-[6.875rem]">
           {cards.map((card) => (
             <ProjectCard key={card.id} {...card} />
           ))}

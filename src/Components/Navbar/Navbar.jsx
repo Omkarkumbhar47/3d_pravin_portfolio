@@ -62,16 +62,22 @@ const Navbar = ({ openMenu, setOpenMenu, count }) => {
                 Pravin Kamble
               </a>
             </li>
-            {/* <li className="py-4">
-              <a href="#about" className="hover:underline">
-                My carrer so far
-              </a>
-            </li> */}
+
             <li className="py-4">
               <a href="/gallery" className="hover:underline">
                 Gallery
               </a>
             </li>
+            <li className="py-4">
+              <a
+                href="/Pravin Kamble_3D Artist_Resume.pdf"
+                download="/Pravin Kamble_3D Artist_Resume.pdf"
+                className="hover:underline"
+              >
+                Download CV
+              </a>
+            </li>
+
             <li className="py-4">
               <a href="/contact" className="hover:underline">
                 Contact Me
