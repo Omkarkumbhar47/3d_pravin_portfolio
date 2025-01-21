@@ -50,7 +50,7 @@ const ContactUs = () => {
   }, [submitted, navigate]);
 
   return (
-    <section className="py-16 bg-gray-100 h-fit w-full">
+    <section className="py-4 md:py-16 bg-gray-100 h-fit md:h-screen w-full">
       {submitted ? (
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -114,12 +114,12 @@ const ContactUs = () => {
           transition={{ duration: 0.5 }}
           className="max-w-7xl mx-auto px-6"
         >
-          <h2 className="text-5xl font-bold text-center text-gray-800 mb-10">
+          <h2 className="   text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-4 ">
             Get In <span className="text-indigo-600">Touch</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             <div className="bg-white shadow-lg rounded-lg p-8">
-              <h3 className="text-3xl font-semibold text-gray-700 mb-6">
+              <h3 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6">
                 Contact Us
               </h3>
               <form onSubmit={handleFormSubmit}>
@@ -190,8 +190,8 @@ const ContactUs = () => {
             </div>
 
             <div className="h-full w-full p-2">
-              <div className="p-8 mt-10 bg-indigo-600 text-white rounded-lg shadow-lg">
-                <h3 className="text-3xl font-semibold mb-6">
+              <div className="p-8 md:mt-10 bg-indigo-600 text-white rounded-lg shadow-lg">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-6">
                   Contact Information
                 </h3>
                 <ul className="space-y-4">
@@ -221,54 +221,54 @@ const ContactUs = () => {
                   </li>
                 </ul>
               </div>
-              <div className="p-8 mt-10 bg-indigo-600 text-white rounded-lg shadow-lg">
+              <div className="p-4 md:p-8 mt-4 md:mt-10 bg-indigo-600 text-white rounded-lg shadow-lg">
                 <h4 className="text-xl font-semibold mb-3">Meet Me At</h4>
-                
+
                 <div className="flex md:space-x-4 space-x-0">
-              {/* LinkedIn */}
-              <span className="text-2xl md:text-4xl w-12">
-                <a
-                  href="https://www.linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="ri-linkedin-box-fill hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#53c3ff] hover:to-[#4ca5ff] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
-                </a>
-              </span>
+                  {/* LinkedIn */}
+                  <span className="text-2xl md:text-4xl w-12">
+                    <a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="ri-linkedin-box-fill hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#53c3ff] hover:to-[#4ca5ff] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
+                    </a>
+                  </span>
 
-              {/* Behance */}
-              <span className="text-2xl md:text-4xl w-12">
-                <a
-                  href="https://www.behance.net"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="ri-behance-line hover:text-[#1769FF] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
-                </a>
-              </span>
+                  {/* Behance */}
+                  <span className="text-2xl md:text-4xl w-12">
+                    <a
+                      href="https://www.behance.net"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="ri-behance-line hover:text-[#1769FF] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
+                    </a>
+                  </span>
 
-              {/* Instagram */}
-              <span className="text-2xl md:text-4xl w-12">
-                <a
-                  href="https://www.instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="ri-instagram-line hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#515BD4] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
-                </a>
-              </span>
+                  {/* Instagram */}
+                  <span className="text-2xl md:text-4xl w-12">
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="ri-instagram-line hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#515BD4] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
+                    </a>
+                  </span>
 
-              {/* Twitter */}
-              <span className="text-2xl md:text-4xl w-12">
-                <a
-                  href="https://www.twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="ri-twitter-line hover:text-[#1DA1F2] hover:scale-150 hover:cursor-pointer transition-all duration-300"></i>
-                </a>
-              </span>
-            </div>
+                  {/* Twitter */}
+                  <span className="text-2xl md:text-4xl w-12">
+                    <a
+                      href="https://www.twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="ri-twitter-line hover:text-[#1DA1F2] hover:scale-150 hover:cursor-pointer transition-all duration-300"></i>
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
