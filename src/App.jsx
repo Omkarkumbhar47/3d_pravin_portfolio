@@ -101,7 +101,7 @@ const App = () => {
         <Route
           path="/gallery"
           element={
-            <Galler
+            <Gallery
               images={images}
               setImages={setImages}
               count={count}
