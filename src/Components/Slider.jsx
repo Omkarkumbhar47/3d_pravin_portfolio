@@ -58,8 +58,8 @@ const Slider = () => {
             Autoplay,
             Thumbs,
           ]}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
             <img

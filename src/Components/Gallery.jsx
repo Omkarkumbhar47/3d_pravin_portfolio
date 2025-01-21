@@ -3,37 +3,37 @@ import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer";
 import CardSvg from "../assets/svg/CardSvg";
 
-const images = [
-  {
-    src: "https://images.unsplash.com/photo-1719937051157-d3d81cc28e86?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Portrait Image 1",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1735583100223-40a01e52ef0a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Landscape Image 1",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1719937051157-d3d81cc28e86?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Portrait Image 2",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1735707370784-9b3e8dd9e8b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8",
-    alt: "Landscape Image 2",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1736192326255-89d26db112c3?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Portrait Image 3",
-  },
-  {
-    src: "https://plus.unsplash.com/premium_photo-1734549547925-153584e3b1ac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Landscape Image 3",
-  },
-];
+// const images = [
+//   {
+//     src: "https://images.unsplash.com/photo-1719937051157-d3d81cc28e86?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//     alt: "Portrait Image 1",
+//   },
+//   {
+//     src: "https://images.unsplash.com/photo-1735583100223-40a01e52ef0a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//     alt: "Landscape Image 1",
+//   },
+//   {
+//     src: "https://images.unsplash.com/photo-1719937051157-d3d81cc28e86?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//     alt: "Portrait Image 2",
+//   },
+//   {
+//     src: "https://images.unsplash.com/photo-1735707370784-9b3e8dd9e8b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8",
+//     alt: "Landscape Image 2",
+//   },
+//   {
+//     src: "https://images.unsplash.com/photo-1736192326255-89d26db112c3?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//     alt: "Portrait Image 3",
+//   },
+//   {
+//     src: "https://plus.unsplash.com/premium_photo-1734549547925-153584e3b1ac?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//     alt: "Landscape Image 3",
+//   },
+// ];
 
-const Gallery = ({ onCountChange, count, openMenu, setOpenMenu }) => {
-  useEffect(() => {
-    onCountChange(images.length);
-  }, [onCountChange]);
+const Gallery = ({  count, openMenu, setOpenMenu, images, setImages }) => {
+  // useEffect(() => {
+  //   onCountChange(images.length);
+  // }, [onCountChange]);
 
   return (
     <div className="px-2 md:px-20 pt-32 w-[95%] md:w-[90%] m-auto bg-gradient-to-r from-gray-800 to-gray-900 text-white">
