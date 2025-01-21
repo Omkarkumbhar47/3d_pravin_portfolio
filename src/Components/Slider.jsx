@@ -17,7 +17,6 @@ import {
   Autoplay,
   Thumbs,
 } from "swiper/modules";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -30,7 +29,6 @@ const Slider = () => {
 
   return (
     <div className="w-full my-10 px-4">
-      {/* Main Slider */}
       <div className="col-span-1 text-3xl  md:text-4xl lg:text-6xl font-bold  md:py-5 text-center">
         <h1 className="text-white leading-tight">Captivating</h1>
         <h1 className="text-[#b6b4bd33]">Moments</h1>
@@ -45,10 +43,10 @@ const Slider = () => {
           pagination={{ clickable: true }}
           effect="coverflow"
           autoplay={{
-            delay: 3000, // 3 seconds delay for autoplay
-            disableOnInteraction: false, // keeps autoplay even when user interacts with the slider
+            delay: 3000,
+            disableOnInteraction: false,
           }}
-          thumbs={{ swiper: thumbsSwiper }} // Link main swiper with thumbs swiper
+          thumbs={{ swiper: thumbsSwiper }}
           modules={[
             Navigation,
             Pagination,
@@ -58,8 +56,6 @@ const Slider = () => {
             Autoplay,
             Thumbs,
           ]}
-          // onSwiper={(swiper) => console.log(swiper)}
-          // onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
             <img
@@ -120,11 +116,10 @@ const Slider = () => {
         </Swiper>
       </div>
 
-      {/* Thumbs Gallery */}
       <div className="my-6">
         <div className="w-full max-w-5xl mx-auto flex justify-center items-center md:p-4 rounded-lg shadow-md">
           <Swiper
-            onSwiper={setThumbsSwiper} // Set the thumbs swiper instance
+            onSwiper={setThumbsSwiper}
             spaceBetween={10}
             slidesPerView={4}
             loop={true}

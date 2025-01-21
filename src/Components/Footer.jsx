@@ -39,7 +39,7 @@ const Footer = () => {
               <h2 className=" text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Go to
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium flex  justify-around">
+              <ul className="text-gray-500 dark:text-gray-400 gap-4 md:gap-8 font-medium flex  justify-around">
                 <li className="">
                   <a href="/contact" className="hover:underline">
                     Contact Me
@@ -99,7 +99,7 @@ const Footer = () => {
             </a>
           </div>
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-          <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start text-center sm:text-left gap-4 pb-6">
+          <div className="flex flex-col sm:flex-row justify-center sm:justify-around items-center sm:items-start text-center sm:text-left gap-4 pb-6">
             <span className="text-sm text-gray-500 dark:text-gray-400">
               © 2025
               <a href="/" className="hover:underline">

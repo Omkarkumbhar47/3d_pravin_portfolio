@@ -7,11 +7,8 @@ const MainContainer = () => {
   let model = useGLTF("./mac.glb");
   let meshes = {};
   model.scene.traverse((e) => {
-    // if(e instanceof THREE.Mesh || e instanceof THREE.Group){
     meshes[e.name] = e;
-    // }
   });
-  // console.log(meshes);
   meshes.screen.rotation.x = THREE.MathUtils.degToRad(180);
   meshes.matte.material.map = tex;
   meshes.matte.material.emissiveIntensity = 0;
