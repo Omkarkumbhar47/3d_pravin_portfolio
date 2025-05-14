@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Experience = () => {
   return (
@@ -27,12 +28,12 @@ const Experience = () => {
                 3D Artist
               </span>
               <span className="mx-3">|</span>
-              <a
-                href="https://noitavonne.com/"
+              <Link
+                to="https://noitavonne.com/"
                 className="text-sm sm:text-base font-normal text-gray-300 hover:underline"
               >
                 Noitavonne India, Kolhapur
-              </a>
+              </Link>
             </div>
           </div>
           <div className="mt-4 text-sm sm:text-base text-gray-400">
@@ -69,12 +70,12 @@ const Experience = () => {
                 3D Artist
               </span>
               <span className="mx-3">|</span>
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="text-sm sm:text-base font-normal text-gray-300 hover:underline"
               >
                 Mumbai Company
-              </a>
+              </Link>
             </div>
           </div>
           <div className="mt-4 text-sm sm:text-base text-gray-400">

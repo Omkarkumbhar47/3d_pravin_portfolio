@@ -5,6 +5,7 @@ import Button from "../Components/Button";
 import ThreeD from "../Components/ThreeD";
 import { motion } from "framer-motion";
 import SecButton from "../Components/SecButton.jsx";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const videoSources = [video1, video2];
@@ -69,46 +70,46 @@ const Hero = () => {
             <div className="flex md:space-x-4 space-x-0">
               {/* LinkedIn */}
               <span className="text-2xl md:text-4xl w-12">
-                <a
-                  href="https://www.linkedin.com"
+                <Link
+                  to="https://www.linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="ri-linkedin-box-fill hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#0077B5] hover:to-[#0A66C2] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
-                </a>
+                </Link>
               </span>
 
               {/* Behance */}
               <span className="text-2xl md:text-4xl w-12">
-                <a
-                  href="https://www.behance.net"
+                <Link
+                  to="https://www.behance.net"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="ri-behance-line hover:text-[#1769FF] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
-                </a>
+                </Link>
               </span>
 
               {/* Instagram */}
               <span className="text-2xl md:text-4xl w-12">
-                <a
-                  href="https://www.instagram.com"
+                <Link
+                  to="https://www.instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="ri-instagram-line hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#515BD4] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
-                </a>
+                </Link>
               </span>
 
               {/* Twitter */}
               <span className="text-2xl md:text-4xl w-12">
-                <a
-                  href="https://www.twitter.com"
+                <Link
+                  to="https://www.twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="ri-twitter-line hover:text-[#1DA1F2] hover:scale-150 hover:cursor-pointer transition-all duration-300"></i>
-                </a>
+                </Link>
               </span>
             </div>
           </motion.div>

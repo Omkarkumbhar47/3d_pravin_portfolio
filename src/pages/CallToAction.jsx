@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   return (
@@ -17,18 +18,18 @@ const CallToAction = () => {
 
         {/* Buttons Section */}
         <div className="flex flex-col md:flex-row gap-4">
-          <a
-            href="/projects"
+          <Link
+            to="/projects"
             className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition"
           >
             Check Out My Projects
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="border border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 font-semibold py-3 px-8 rounded-lg transition"
           >
             Contact Me
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import photo from "../assets/img/pravinImg.jpg";
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <div className="w-full mt-4 md:mt-16 md:h-screen grid grid-cols-1 md:grid-cols-2 items-center text-justify justify-center gap-2 px-2 ">
@@ -43,11 +44,11 @@ const About = () => {
             </li>
           </ul>
 
-          <a href="/contact">
+          <Link to="/contact">
             <p className="mt-2 md:mt-10 text-start text-xl font-semibold text-indigo-400 hover:text-[#ff0088]">
               Let's create something extraordinary together!
             </p>
-          </a>
+          </Link>
         </div>
       </div>
 

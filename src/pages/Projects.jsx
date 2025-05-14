@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import img1 from "../assets/img/img1.jpg";
 import img2 from "../assets/img/img2.jpg";
@@ -24,8 +24,8 @@ const ProjectCard = ({ id, title, subtitle, image, modelPath }) => {
       onClick={handleCardClick}
       className="relative w-full max-w-[350px] md:max-w-[400px] lg:max-w-[450px] mx-auto"
     >
-      <a
-        // href={link}
+      <Link
+        // to={link}
         target="_blank"
         rel="noopener noreferrer"
         className="relative bg-[#e2d3b47a] w-full h-full aspect-square rounded-[1.25rem] p-2 shadow-2xl flex flex-col hover:scale-105 transition-transform"
@@ -48,7 +48,7 @@ const ProjectCard = ({ id, title, subtitle, image, modelPath }) => {
             </span>
           </div>
         </div>
-      </a>
+      </Link>
     </article>
   );
 };
@@ -153,14 +153,14 @@ const Projects = () => {
 
   return (
     <>
-      <a
-        href="/"
+      <Link
+        to="/"
         className="text-black fixed text-2xl top-7 left-1/2 transform -translate-x-1/2 z-50 text-center tracking-wider uppercase"
       >
         Pravin
         <br />
         Kamble
-      </a>
+      </Link>
 
       <div
         onClick={handleGoBack}

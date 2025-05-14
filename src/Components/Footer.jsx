@@ -13,10 +13,10 @@ const Footer = () => {
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div className="md:flex md:justify-around">
             <div className="h-full flex justify-center items-center pb-4">
-              <a href="/" className="flex items-center">
+              <Link to="/" className="flex items-center">
                 <img src={logo} className="h-8 mr-3" alt="Logo" />
                 <div className="text-2xl font-semibold">Pravin Kamble</div>
-              </a>
+              </Link>
             </div>
 
             <form className="max-w-sm">
@@ -41,15 +41,13 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 gap-4 md:gap-8 font-medium flex  justify-around">
                 <li className="">
-                  <Link to="/contact">Contact link</Link>
-                  <a href="/contact" className="hover:underline">
-                    Contact Me
-                  </a>
+                  <Link to="/contact" >Contact Me</Link>
+                  
                 </li>
                 <li>
-                  <a href="/projects" className="hover:underline">
+                  <Link to="/projects" className="hover:underline">
                     Projects
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -58,85 +56,85 @@ const Footer = () => {
           <div className="sm:flex sm:items-center sm:justify-between md:mx-10 text-center sm:text-left">
             <span className="text-sm text-gray-500 dark:text-gray-400">
               © 2025
-              <a href="/" className="hover:underline">
+              <Link to="/" className="hover:underline">
                 Pravin
-              </a>
+              </Link>
               . All Rights Reserved.
             </span>
             <div className="flex justify-center sm:justify-start mt-4 sm:mt-0 space-x-5">
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <i className="ri-facebook-fill text-2xl"></i>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <i className="ri-discord-line text-2xl"></i>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <i className="ri-twitter-line text-2xl"></i>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <i className="ri-github-line text-2xl"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </footer>
       ) : (
         <footer className="mx-auto w-full max-w-screen-xl">
           <div className="h-full flex justify-center items-center pt-3">
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img src={logo} className="h-8 mr-3" alt="Logo" />
               <div className="text-2xl font-semibold">Pravin Kamble</div>
-            </a>
+            </Link>
           </div>
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div className="flex flex-col sm:flex-row justify-center sm:justify-around items-center sm:items-start text-center sm:text-left gap-4 pb-6">
             <span className="text-sm text-gray-500 dark:text-gray-400">
               © 2025
-              <a href="/" className="hover:underline">
+              <Link to="/" className="hover:underline">
                 Pravin
-              </a>
+              </Link>
               . All Rights Reserved.
             </span>
             <div className="flex justify-center sm:justify-start space-x-5">
-              <a
-                href="https://www.linkedin.com"
+              <Link
+                to="https://www.linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="ri-linkedin-box-fill text-gray-500 hover:text-gray-900 dark:hover:text-white text-2xl"></i>
-              </a>
-              <a
-                href="https://www.behance.net"
+              </Link>
+              <Link
+                to="https://www.behance.net"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="ri-behance-line text-gray-500 hover:text-gray-900 dark:hover:text-white text-2xl"></i>
-              </a>
-              <a
-                href="https://www.instagram.com"
+              </Link>
+              <Link
+                to="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="ri-instagram-line text-gray-500 hover:text-gray-900 dark:hover:text-white text-2xl"></i>
-              </a>
-              <a
-                href="https://www.twitter.com"
+              </Link>
+              <Link
+                to="https://www.twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="ri-twitter-line text-gray-500 hover:text-gray-900 dark:hover:text-white text-2xl"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </footer>

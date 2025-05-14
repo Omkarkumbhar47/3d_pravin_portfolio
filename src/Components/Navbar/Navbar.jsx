@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = ({ openMenu, setOpenMenu, count }) => {
@@ -7,6 +7,11 @@ const Navbar = ({ openMenu, setOpenMenu, count }) => {
   const handleOpenMenu = () => {
     setOpenMenu(true);
   };
+
+//   useEffect(() => {
+//   document.body.style.overflow = openMenu ? "hidden" : "auto";
+// }, [openMenu]);
+
   return (
     <div className="fixed inset-0 h-[100px] menu">
       <Link
@@ -58,20 +63,20 @@ const Navbar = ({ openMenu, setOpenMenu, count }) => {
           <ul className="mt-24 md:mt-44 md:mx-40 lg:mx-64 text-4xl md:text-6xl font-semibold px-4 py-8">
             <div className="text-xs opacity-40 mb-4">Menu</div>
             <li className="py-4">
-              <a href="/" className="hover:underline">
+              <Link to="/" className="hover:underline">
                 Pravin Kamble
-              </a>
+              </Link>
             </li>
 
             <li className="py-4">
-              <a href="/gallery" className="hover:underline">
+              <Link to="/gallery" className="hover:underline">
                 Gallery
-              </a>
+              </Link>
             </li>
             <li className="py-4">
               <a
                 href="/Pravin Kamble_3D Artist_Resume.pdf"
-                download="/Pravin Kamble_3D Artist_Resume.pdf"
+                download
                 className="hover:underline"
               >
                 Download CV
@@ -79,9 +84,9 @@ const Navbar = ({ openMenu, setOpenMenu, count }) => {
             </li>
 
             <li className="py-4">
-              <a href="/contact" className="hover:underline">
+              <Link to="/contact" className="hover:underline">
                 Contact Me
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

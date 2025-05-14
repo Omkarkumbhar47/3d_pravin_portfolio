@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Footer from "../Components/Footer.jsx"
 const ContactUs = () => {
@@ -197,27 +197,27 @@ const ContactUs = () => {
               <ul className="space-y-4">
                 <li>📍 Kolhapur, Maharashtra, India</li>
                 <li>
-                  <a href="tel:+919075739271" className="hover:underline">
+                  <Link to="tel:+919075739271" className="hover:underline">
                     📞 +91 9075739271
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="mailto:pravinkamble883@gmail.com"
+                  <Link
+                    to="mailto:pravinkamble883@gmail.com"
                     className="hover:underline"
                   >
                     📧 pravinkamble883@gmail.com
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="https://www.behance.net/pravinkamble9"
+                  <Link
+                    to="https://www.behance.net/pravinkamble9"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:underline"
                   >
                     🌐 Pravin's Portfolio
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -227,46 +227,46 @@ const ContactUs = () => {
               <div className="flex md:space-x-4 space-x-0">
                 {/* LinkedIn */}
                 <span className="text-2xl md:text-4xl w-12">
-                  <a
-                    href="https://www.linkedin.com"
+                  <Link
+                    to="https://www.linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <i className="ri-linkedin-box-fill hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#53c3ff] hover:to-[#4ca5ff] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
-                  </a>
+                  </Link>
                 </span>
 
                 {/* Behance */}
                 <span className="text-2xl md:text-4xl w-12">
-                  <a
-                    href="https://www.behance.net"
+                  <Link
+                    to="https://www.behance.net"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <i className="ri-behance-line hover:text-[#1769FF] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
-                  </a>
+                  </Link>
                 </span>
 
                 {/* Instagram */}
                 <span className="text-2xl md:text-4xl w-12">
-                  <a
-                    href="https://www.instagram.com"
+                  <Link
+                    to="https://www.instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <i className="ri-instagram-line hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#515BD4] hover:scale-110 hover:cursor-pointer transition-all duration-300"></i>
-                  </a>
+                  </Link>
                 </span>
 
                 {/* Twitter */}
                 <span className="text-2xl md:text-4xl w-12">
-                  <a
-                    href="https://www.twitter.com"
+                  <Link
+                    to="https://www.twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <i className="ri-twitter-line hover:text-[#1DA1F2] hover:scale-150 hover:cursor-pointer transition-all duration-300"></i>
-                  </a>
+                  </Link>
                 </span>
               </div>
             </div>
