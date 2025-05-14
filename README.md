@@ -1,52 +1,23 @@
----
+# 3D Portfolio
 
-### **Project Title** : 3D Portfolio
+A creative showcase for a talented 3D designer, featuring intricate and lifelike 3D models with fluid animations that captivate viewers. Each model showcases exceptional detail, from realistic textures to dynamic lighting, bringing the designer's artistic vision to life. Built with cutting-edge web technologies to deliver an immersive and interactive user experience.
 
-A creative showcase for a talented 3D designer, featuring stunning models and animations. Built with cutting-edge web technologies to deliver an immersive experience.
+## Project Link
 
-### **Tech Stack**
-- **Three.js** - For 3D rendering and animations
-- **React.js** - JavaScript library for building user interfaces
-- **React Drei** - Useful helpers for working with Three.js in React
-- **Tailwind CSS** - Utility-first CSS framework for styling
-- **Poly Haven** - Used for the environment maps
+[Visit the Live Portfolio](https://pravin-s-portfolio.vercel.app/)
 
-### **Installation and Setup**
+## Tech Stack
 
-To get started with the project, follow these steps:
+- **Three.js** - For advanced 3D rendering and animations.
+- **React.js** - JavaScript library for building dynamic and responsive user interfaces.
+- **React Drei** - Collection of essential helpers to simplify working with Three.js in React.
+- **Tailwind CSS** - Utility-first CSS framework for seamless and efficient styling.
+- **Poly Haven** - Source for high-quality environment maps to enhance realism.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/projectname.git
-   cd projectname
-   ```
+## Features
 
-2. Install the dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Build the project for production:
-   ```bash
-   npm run build
-   ```
-
-5. Preview the production build:
-   ```bash
-   npm run preview
-   ```
-
-### **Credits**
-- Environment maps by [Poly Haven](https://polyhaven.com)
-
-### **License**
-This project is licensed under the MIT License.
-
----
-
-
+- Showcase of professional 3D models, including architectural designs, product visualizations, and character models.
+- Interactive features such as model rotation, zoom, and highlighting specific parts for detailed exploration.
+- Optimized for performance with lazy loading and responsive design for all screen sizes.
+- Realistic lighting and environments using Poly Haven maps, enhancing model textures and reflections.
+- Smooth transitions between sections, powered by animations and scroll-based triggers.

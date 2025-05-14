@@ -51,12 +51,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className="w-full h-fit sm:h-[75%] md:h-[85%] flex justify-center items-center shadow-lg rounded-lg overflow-hidden">
+      <div className="w-full h-fit sm:h-[75%] md:h-[85%] flex justify-center items-center shadow-xxl shadow-red-700 rounded-xxl overflow-hidden">
         <img
           src={photo}
           // src="https://images.unsplash.com/photo-1735915169185-bf607b00fc2a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJhdyUyMHBvcnRyYWl0fGVufDB8fDB8fHww"
           // alt="Pravin's Portrait"
-          className="w-full h-full object-cover"
+          style={{}}
+          className="w-full h-full object-cover shadow-xxl shadow-red-700 rounded-lg"
         />
       </div>
     </div>
