@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
-import img1 from "../assets/img/img1.jpg";
-import img2 from "../assets/img/img2.jpg";
+import img1 from "../assets/img/3d mixer.png";
+import img2 from "../assets/img/electric scooter.png";
 import img3 from "../assets/img/img3.jpg";
 import img4 from "../assets/img/img4.jpg";
 import img5 from "../assets/img/img5.jpg";
@@ -11,7 +11,7 @@ import img7 from "../assets/img/img7.jpg";
 import img8 from "../assets/img/img8.jpg";
 import img9 from "../assets/img/img9.jpg";
 import img10 from "../assets/img/img10.jpg";
-import chairGlb from "../../public/Chair.glb";
+const chairGlb = "/pravin.glb";
 
 const ProjectCard = ({ id, title, subtitle, image, modelPath }) => {
   const navigate = useNavigate();
@@ -24,12 +24,7 @@ const ProjectCard = ({ id, title, subtitle, image, modelPath }) => {
       onClick={handleCardClick}
       className="relative w-full max-w-[350px] md:max-w-[400px] lg:max-w-[450px] mx-auto"
     >
-      <Link
-        // to={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="relative bg-[#e2d3b47a] w-full h-full aspect-square rounded-[1.25rem] p-2 shadow-2xl flex flex-col hover:scale-105 transition-transform"
-      >
+      <div className="relative bg-[#e2d3b47a] w-full h-full aspect-square rounded-[1.25rem] p-2 shadow-2xl flex flex-col hover:scale-105 transition-transform">
         <div className="flex flex-col w-full h-full items-center border p-2 border-black border-dashed rounded-lg">
           <div className="overflow-hidden rounded-lg w-full h-full flex items-center justify-center">
             <img
@@ -48,7 +43,7 @@ const ProjectCard = ({ id, title, subtitle, image, modelPath }) => {
             </span>
           </div>
         </div>
-      </Link>
+      </div>
     </article>
   );
 };
@@ -57,8 +52,8 @@ const Projects = () => {
   const cards = [
     {
       id: 1,
-      title: "3D House",
-      subtitle: "Plan Design 1",
+      title: "3D Dj",
+      subtitle: "Mixer",
       image: img1,
       link: "#",
 
@@ -66,8 +61,8 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "3D House",
-      subtitle: "Plan Design 2",
+      title: "3D Electric",
+      subtitle: "Scooter",
       image: img2,
       link: "#",
       modelPath: chairGlb,

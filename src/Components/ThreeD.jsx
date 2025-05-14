@@ -39,8 +39,8 @@ function Rig() {
   });
   return (
     <CameraShake
-      maxYaw={0.01}
-      maxPitch={0.01}
+      maxYaw={0.001}
+      maxPitch={0.001}
       maxRoll={0.01}
       yawFrequency={0.5}
       pitchFrequency={0.5}
@@ -50,27 +50,27 @@ function Rig() {
 }
 
 function ModelComponent() {
-  const { scene } = useGLTF('/Chair.glb'); // Corrected path for model
+  const { scene } = useGLTF('/pravin.glb'); // Corrected path for model
   return <primitive object={scene} />;
 }
 
 export default function App() {
   return (
-    <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 30, 100], fov: 83 }}>
+    <Canvas shadows dpr={[1, 2]} camera={{ position: [40, 20, 100], fov: 5  }}>
       <Suspense fallback={<Html center><div>Loading...</div></Html>}>
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={0.2} />
         <spotLight position={[50, 50, -30]} castShadow />
-        <pointLight position={[-10, -10, -10]} color="red" intensity={3} />
+        <pointLight position={[-10, -10, -10]} color="red" intensity={2} />
         <pointLight position={[0, -5, 5]} intensity={0.5} />
-        <directionalLight position={[0, -5, 0]} color="white" intensity={2} />
+        <directionalLight position={[0, -5, 0]} color="white" intensity={1} />
         <Light />
         <Environment preset="studio" />
 
-        <Bounds fit clip observe margin={2}>
+        <Bounds fit clip observe margin={1.1}>
           <ModelComponent position={[0, 0, 0]} /> 
         </Bounds>
 
-        <Rig />
+        {/* <Rig />  */}
       </Suspense>
 
       <OrbitControls makeDefault />

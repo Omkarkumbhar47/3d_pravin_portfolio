@@ -1,9 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, Suspense } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
+import { OrbitControls, useGLTF, Environment, Html } from "@react-three/drei";
 import * as THREE from "three";
-import studio from "../../public/photo_studio_01_4k.hdr"
+import studio from "/photo_studio_01_4k.hdr"
 const ModelViewer = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -41,7 +41,7 @@ const ModelViewer = () => {
   };
 
   return (
-    <div className="relative w-full h-screen bg-gray-100">
+    <div className="relative w-full h-screen bg-[#292929] text-white">
       {/* Navigation Buttons */}
       <div className="absolute top-5 left-5 z-50 space-y-4">
         <button
@@ -60,6 +60,7 @@ const ModelViewer = () => {
 
       {/* 3D Model Canvas */}
       <Canvas className="w-full h-full">
+         <Suspense fallback={<Html center><div className="text-white">Loading...</div></Html>}>
         {/* Ambient and HDRI Lighting */}
         <ambientLight intensity={0.3} />
         <Environment
@@ -70,6 +71,7 @@ const ModelViewer = () => {
         <spotLight position={[10, 10, 10]} angle={0.3} intensity={1} castShadow />
         <Model />
         <OrbitControls enableZoom={true} />
+        </Suspense>
       </Canvas>
     </div>
   );
