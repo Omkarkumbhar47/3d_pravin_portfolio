@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "/favicon-32x32.png";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
@@ -41,6 +41,7 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 gap-4 md:gap-8 font-medium flex  justify-around">
                 <li className="">
+                  <Link to="/contact">Contact link</Link>
                   <a href="/contact" className="hover:underline">
                     Contact Me
                   </a>
