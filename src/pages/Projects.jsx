@@ -2,23 +2,17 @@ import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import img1 from "../assets/img/pravin img.png";
-import img2 from "../assets/img/knight img.png";
 import img3 from "../assets/img/chair img.png";
-import img4 from "../assets/img/tab img.png";
-import img5 from "../assets/img/earth img.png";
+import img5 from "../assets/img/Mac img.png";
 import img6 from "../assets/img/iphone img.png";
 import img7 from "../assets/img/house omg.png";
 const modelPaths = {
-  chair: "/models/Chair.glb",
-  earth: "/models/earth.glb",
-  iphone: "/models/iphone.gltf",
-  mac: "/models/house.gltf",
   pravin: "/models/pravin.glb",
-  sceneCopy: "/models/Scene_copy.gltf",
-  volkiharKnight: "/models/volkihar-knight.glb",
+  chair: "/models/Chair.glb",
+  iphone: "/models/iphone.gltf",
+  earth: "/models/mac.glb",
+  mac: "/models/house.gltf",
 };
-
-
 
 const ProjectCard = ({ id, title, subtitle, image, modelPath }) => {
   const navigate = useNavigate();
@@ -56,17 +50,43 @@ const ProjectCard = ({ id, title, subtitle, image, modelPath }) => {
 };
 
 const Projects = () => {
-  
   const cards = [
-    { id: 1, title: "Pravin", subtitle: "Character", image: img1, modelPath: modelPaths.pravin },
-    // { id: 2, title: "Knight", subtitle: "Volkihar", image: img2, modelPath: modelPaths.volkiharKnight },
-    { id: 3, title: "3D ", subtitle: "Chair", image: img3, modelPath: modelPaths.chair },
-    // { id: 4, title: "Tab", subtitle: "", image: img4, modelPath: modelPaths.sceneCopy },
-    // { id: 5, title: "Earth", subtitle: "Planet ", image: img5, modelPath: modelPaths.earth },
-    { id: 6, title: "iPhone 11", subtitle: "Mobile", image: img6, modelPath: modelPaths.iphone },
-    { id: 7, title: "House", subtitle: "Wooden", image: img7, modelPath: modelPaths.mac },
+    {
+      id: 1,
+      title: "Pravin",
+      subtitle: "Character",
+      image: img1,
+      modelPath: modelPaths.pravin,
+    },
+    {
+      id: 2,
+      title: "3D",
+      subtitle: "Chair",
+      image: img3,
+      modelPath: modelPaths.chair,
+    },
+    {
+      id: 3,
+      title: "iPhone 11",
+      subtitle: "Mobile",
+      image: img6,
+      modelPath: modelPaths.iphone,
+    },
+    {
+      id: 4,
+      title: "Mac",
+      subtitle: " ",
+      image: img5,
+      modelPath: modelPaths.earth,
+    },
+    {
+      id: 5,
+      title: "House",
+      subtitle: "Wooden",
+      image: img7,
+      modelPath: modelPaths.mac,
+    },
   ];
-
 
   const cardsTotal = cards.length;
 

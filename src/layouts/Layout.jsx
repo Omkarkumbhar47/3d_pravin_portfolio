@@ -29,7 +29,7 @@ const Layout = ({ count, children, openMenu, setOpenMenu }) => {
         smooth: true,
       },
     });
-
+window.locomotive = scroll;
     // Update scroll when DOM changes
     const resizeObserver = new ResizeObserver(() => {
       scroll.update();
@@ -54,7 +54,13 @@ const Layout = ({ count, children, openMenu, setOpenMenu }) => {
           openMenu ? "overflow-hidden  " : ""
         }`}
       >
-        <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} count={count} />
+        <Navbar
+          setOpenMenu={setOpenMenu}
+          openMenu={openMenu}
+          count={count}
+          scrollProgress={scrollProgress}
+        />
+
         <main>{children}</main>
         <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
         <div ref={scrollRef}>
@@ -68,10 +74,10 @@ const Layout = ({ count, children, openMenu, setOpenMenu }) => {
           </div>
 
           <div className="md:w-[90%] m-auto h-auto">
-            <Hero />  
+            <Hero />
             <Detail />
             <About />
-            <Slider/>
+            <Slider />
             <Card />
             <Experience />
             <CallToAction />

@@ -71,7 +71,7 @@ const Hero = () => {
               {/* LinkedIn */}
               <span className="text-2xl md:text-4xl w-12">
                 <Link
-                  to="https://www.linkedin.com"
+                  to="https://www.linkedin.com/in/pravin-kamble-8962b9212/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -82,7 +82,7 @@ const Hero = () => {
               {/* Behance */}
               <span className="text-2xl md:text-4xl w-12">
                 <Link
-                  to="https://www.behance.net"
+                  to="https://www.behance.net/pravinkamble9"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -93,7 +93,7 @@ const Hero = () => {
               {/* Instagram */}
               <span className="text-2xl md:text-4xl w-12">
                 <Link
-                  to="https://www.instagram.com"
+                  to="https://www.instagram.com/pravin_kamble_6666/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -104,7 +104,7 @@ const Hero = () => {
               {/* Twitter */}
               <span className="text-2xl md:text-4xl w-12">
                 <Link
-                  to="https://www.twitter.com"
+                  to="https://www.linkedin.com/in/pravin-kamble-8962b9212/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

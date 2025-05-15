@@ -3,14 +3,25 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = ({ openMenu, setOpenMenu, count }) => {
   const location = useLocation();
-
+  const [scrolledDown, setScrolledDown] = useState(false);
   const handleOpenMenu = () => {
     setOpenMenu(true);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolledDown(window.scrollY > 500); // threshold to show "Go to Top"
+    };``
 
-//   useEffect(() => {
-//   document.body.style.overflow = openMenu ? "hidden" : "auto";
-// }, [openMenu]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const handleScrollClick = () => {
+    if (scrolledDown) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+
 
   return (
     <div className="fixed inset-0 h-[100px] menu">
@@ -25,8 +36,19 @@ const Navbar = ({ openMenu, setOpenMenu, count }) => {
 
       {!openMenu && (
         <nav className="fixed top-0 left-0 z-10 w-full flex justify-between items-center px-4 sm:px-12 md:px-24 pt-12 tracking-wider uppercase">
-          <div className="whitespace-nowrap text-[0.60rem] pl-0 md:pl-4">
-            Scroll <span className="block md:inline">Down</span>
+          <div
+            className="whitespace-nowrap text-[0.60rem] pl-0 md:pl-4 cursor-pointer hover:underline"
+            onClick={handleScrollClick}
+          >
+            {scrolledDown ? (
+              <>
+                Go <span className="block md:inline">to Top</span>
+              </>
+            ) : (
+              <>
+                Scroll <span className="block md:inline">Down</span>
+              </>
+            )}
           </div>
 
           <div className="flex-1 flex justify-end items-center gap-4 sm:gap-8">
@@ -63,13 +85,21 @@ const Navbar = ({ openMenu, setOpenMenu, count }) => {
           <ul className="mt-24 md:mt-44 md:mx-40 lg:mx-64 text-4xl md:text-6xl font-semibold px-4 py-8">
             <div className="text-xs opacity-40 mb-4">Menu</div>
             <li className="py-4">
-              <Link to="/" className="hover:underline">
+              <Link
+                to="/"
+                className="hover:underline"
+                onClick={() => setOpenMenu(false)}
+              >
                 Pravin Kamble
               </Link>
             </li>
 
             <li className="py-4">
-              <Link to="/gallery" className="hover:underline">
+              <Link
+                to="/gallery"
+                className="hover:underline"
+                onClick={() => setOpenMenu(false)}
+              >
                 Gallery
               </Link>
             </li>
@@ -84,7 +114,11 @@ const Navbar = ({ openMenu, setOpenMenu, count }) => {
             </li>
 
             <li className="py-4">
-              <Link to="/contact" className="hover:underline">
+              <Link
+                to="/contact"
+                className="hover:underline"
+                onClick={() => setOpenMenu(false)}
+              >
                 Contact Me
               </Link>
             </li>
