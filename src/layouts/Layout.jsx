@@ -50,7 +50,7 @@ window.locomotive = scroll;
   return (
     <>
       <div
-        className={`w-full px-4 md:px-24 relative ${
+        className={`w-full px-4 lg:px-24 relative ${
           openMenu ? "overflow-hidden  " : ""
         }`}
       >
@@ -62,9 +62,9 @@ window.locomotive = scroll;
         />
 
         <main>{children}</main>
-        <NavLink to="/projects">{openMenu ? null : <CardSvg />}</NavLink>
+        <NavLink to="/projects" className="hidden lg:block">{openMenu ? null : <CardSvg />}</NavLink>
         <div ref={scrollRef}>
-          <div className="bg-[#fff] w-[8px] top-0 bottom-0 fixed rounded-full hidden md:block">
+          <div className="bg-[#fff] w-[8px] top-0 bottom-0 fixed rounded-full hidden lg:block">
             <motion.div
               className="bg-[#ff0088] m-auto rounded-full"
               style={{

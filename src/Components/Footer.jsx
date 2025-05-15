@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="bg-gradient-to-r from-gray-800 to-gray-900">
       <hr className="py-2 lg:py-4 border-gray-200 sm:mx-auto dark:border-gray-700" />
       {location.pathname === "/gallery" ? (
-        <footer className="mx-auto w-full max-w-screen-xl p-4 py-4 lg:py-2">
+        <footer className="pb-20 mx-auto w-full max-w-screen-xl p-4 py-4 lg:py-2">
           <div className="text-center text-xl">
             Created by
             <Link
@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
         </footer>
       ) : (
-        <footer className="mx-auto w-full max-w-screen-xl">
+        <footer className="pb-20 mx-auto w-full max-w-screen-xl">
           <div className="text-center text-xl ">
             Created by
             <Link

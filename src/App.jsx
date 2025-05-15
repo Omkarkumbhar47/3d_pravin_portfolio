@@ -84,7 +84,8 @@ const App = () => {
   }, [images]);
 
   return (
-    <BrowserRouter>
+    <div className=" ">
+      <BrowserRouter>
       <Routes>
         <Route
           path="/"
@@ -114,6 +115,7 @@ const App = () => {
         <Route path="/viewer" element={<ModelViewer />} />
       </Routes>
     </BrowserRouter>
+    </div>
   );
 };
 
