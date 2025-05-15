@@ -1,18 +1,24 @@
 import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
-import img1 from "../assets/img/3d mixer.png";
-import img2 from "../assets/img/electric scooter.png";
-import img3 from "../assets/img/img3.jpg";
-import img4 from "../assets/img/img4.jpg";
-import img5 from "../assets/img/img5.jpg";
-import img6 from "../assets/img/img6.jpg";
-import img7 from "../assets/img/img7.jpg";
-import img8 from "../assets/img/img8.jpg";
-import img9 from "../assets/img/img9.jpg";
-import img10 from "../assets/img/img10.jpg";
-const chairGlb = "/pravin.glb";
-const eleScooter ="/electric_scooter/scene.gltf";
+import img1 from "../assets/img/pravin img.png";
+import img2 from "../assets/img/knight img.png";
+import img3 from "../assets/img/chair img.png";
+import img4 from "../assets/img/tab img.png";
+import img5 from "../assets/img/earth img.png";
+import img6 from "../assets/img/iphone img.png";
+import img7 from "../assets/img/house omg.png";
+const modelPaths = {
+  chair: "/models/Chair.glb",
+  earth: "/models/earth.glb",
+  iphone: "/models/iphone.gltf",
+  mac: "/models/house.gltf",
+  pravin: "/models/pravin.glb",
+  sceneCopy: "/models/Scene_copy.gltf",
+  volkiharKnight: "/models/volkihar-knight.glb",
+};
+
+
 
 const ProjectCard = ({ id, title, subtitle, image, modelPath }) => {
   const navigate = useNavigate();
@@ -50,89 +56,17 @@ const ProjectCard = ({ id, title, subtitle, image, modelPath }) => {
 };
 
 const Projects = () => {
+  
   const cards = [
-    {
-      id: 1,
-      title: "3D Dj",
-      subtitle: "Mixer",
-      image: img1,
-      link: "#",
-
-      modelPath: chairGlb,
-    },
-    {
-      id: 2,
-      title: "3D Electric",
-      subtitle: "Scooter",
-      image: img2,
-      link: "#",
-      modelPath: eleScooter,
-    },
-    {
-      id: 3,
-      title: "3D House",
-      subtitle: "Plan Design 3",
-      image: img3,
-      link: "#",
-      modelPath: chairGlb,
-    },
-    {
-      id: 4,
-      title: "The",
-      subtitle: "Bicycle Light",
-      image: img4,
-      link: "#",
-      modelPath: chairGlb,
-    },
-    {
-      id: 5,
-      title: "The",
-      subtitle: "Blender Work",
-      image: img5,
-      link: "#",
-      modelPath: chairGlb,
-    },
-    {
-      id: 6,
-      title: "The",
-      subtitle: "Design 1",
-      image: img6,
-      link: "#",
-      modelPath: chairGlb,
-    },
-    {
-      id: 7,
-      title: "The",
-      subtitle: "Design 2",
-      image: img7,
-      link: "#",
-      modelPath: chairGlb,
-    },
-    {
-      id: 8,
-      title: "The",
-      subtitle: "Design 3",
-      image: img8,
-      link: "#",
-      modelPath: chairGlb,
-    },
-    {
-      id: 9,
-      title: "The",
-      subtitle: "Design 4",
-      image: img9,
-      link: "#",
-      modelPath: chairGlb,
-    },
-    {
-      id: 10,
-      title: "The USA",
-      subtitle: "Food Mall Interior",
-      image: img10,
-      link: "#",
-      modelPath: chairGlb,
-    },
+    { id: 1, title: "Pravin", subtitle: "Character", image: img1, modelPath: modelPaths.pravin },
+    // { id: 2, title: "Knight", subtitle: "Volkihar", image: img2, modelPath: modelPaths.volkiharKnight },
+    { id: 3, title: "3D ", subtitle: "Chair", image: img3, modelPath: modelPaths.chair },
+    // { id: 4, title: "Tab", subtitle: "", image: img4, modelPath: modelPaths.sceneCopy },
+    // { id: 5, title: "Earth", subtitle: "Planet ", image: img5, modelPath: modelPaths.earth },
+    { id: 6, title: "iPhone 11", subtitle: "Mobile", image: img6, modelPath: modelPaths.iphone },
+    { id: 7, title: "House", subtitle: "Wooden", image: img7, modelPath: modelPaths.mac },
   ];
+
 
   const cardsTotal = cards.length;
 
