@@ -50,7 +50,7 @@ function Rig() {
 }
 
 function ModelComponent() {
-  const { scene } = useGLTF('/pravin.glb'); // Corrected path for model
+  const { scene } = useGLTF('/models/pravin.glb'); // Corrected path for model
   return <primitive object={scene} />;
 }
 
