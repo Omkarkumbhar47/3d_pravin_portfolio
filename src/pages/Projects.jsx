@@ -12,6 +12,7 @@ import img8 from "../assets/img/img8.jpg";
 import img9 from "../assets/img/img9.jpg";
 import img10 from "../assets/img/img10.jpg";
 const chairGlb = "/pravin.glb";
+const eleScooter ="../../public/electric_scooter/scene.gltf";
 
 const ProjectCard = ({ id, title, subtitle, image, modelPath }) => {
   const navigate = useNavigate();
@@ -65,7 +66,7 @@ const Projects = () => {
       subtitle: "Scooter",
       image: img2,
       link: "#",
-      modelPath: chairGlb,
+      modelPath: eleScooter,
     },
     {
       id: 3,
