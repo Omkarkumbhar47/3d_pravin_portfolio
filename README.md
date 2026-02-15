@@ -1,23 +1,120 @@
-# 3D Portfolio
+# 🎨 3D Artist Portfolio – Interactive Three.js Experience
 
-A creative showcase for a talented 3D designer, featuring intricate and lifelike 3D models with fluid animations that captivate viewers. Each model showcases exceptional detail, from realistic textures to dynamic lighting, bringing the designer's artistic vision to life. Built with cutting-edge web technologies to deliver an immersive and interactive user experience.
+🌐 **Live Demo:** https://pravin-s-portfolio.vercel.app
+📂 **Repository:** https://github.com/Omkarkumbhar47/3d_pravin_portfolio
+👨‍💻 **Developed by:** Omkar Kumbhar
 
-## Project Link
+---
 
-[Visit the Live Portfolio](https://pravin-s-portfolio.vercel.app/)
+## 📌 Overview
 
-## Tech Stack
+An immersive and visually rich 3D portfolio website built for a professional 3D artist to showcase models, animations, and creative work in an interactive web environment.
 
-- **Three.js** - For advanced 3D rendering and animations.
-- **React.js** - JavaScript library for building dynamic and responsive user interfaces.
-- **React Drei** - Collection of essential helpers to simplify working with Three.js in React.
-- **Tailwind CSS** - Utility-first CSS framework for seamless and efficient styling.
-- **Poly Haven** - Source for high-quality environment maps to enhance realism.
+This project focuses on delivering a high-performance 3D viewing experience using modern web technologies, realistic lighting, and smooth UI transitions.
 
-## Features
+---
 
-- Showcase of professional 3D models, including architectural designs, product visualizations, and character models.
-- Interactive features such as model rotation, zoom, and highlighting specific parts for detailed exploration.
-- Optimized for performance with lazy loading and responsive design for all screen sizes.
-- Realistic lighting and environments using Poly Haven maps, enhancing model textures and reflections.
-- Smooth transitions between sections, powered by animations and scroll-based triggers.
+## 🎯 Purpose of the Project
+
+Traditional portfolios display static images of 3D work.
+This project brings models to life by allowing users to explore them interactively in the browser.
+
+It demonstrates:
+
+* Real-time 3D rendering
+* Interactive model exploration
+* Smooth animations & transitions
+* Performance-optimized UI
+
+---
+
+## ✨ Key Features
+
+### 🧊 Interactive 3D Model Showcase
+
+* Real-time rendering using Three.js
+* Rotate, zoom, and explore models
+* High-quality textures and environments
+* Highlighting and focus interactions
+
+### 🎥 Smooth User Experience
+
+* Scroll-based transitions
+* Section animations
+* Seamless navigation
+* Responsive layout
+
+### ⚡ Performance Optimized
+
+* Lazy loading of heavy assets
+* Optimized 3D model rendering
+* Mobile-friendly design
+
+### 🌍 Realistic Lighting & Environment
+
+* HDR environment maps from Poly Haven
+* Enhanced reflections and textures
+* Depth-based lighting effects
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+
+* React.js
+* Three.js
+* React Three Fiber
+* React Drei
+* Tailwind CSS
+
+**Assets**
+
+* Poly Haven (HDRI environment maps)
+
+---
+
+## 🧠 What I Learned
+
+* Building interactive 3D experiences in React
+* Optimizing performance for heavy 3D assets
+* Implementing realistic lighting & environments
+* Structuring scalable Three.js projects
+* Enhancing UX using motion & transitions
+
+---
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Omkarkumbhar47/3d_pravin_portfolio.git
+cd 3d_pravin_portfolio
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the project
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔗 Live Project
+
+https://pravin-s-portfolio.vercel.app
+
+---
+
+## 👨‍💻 Author
+
+**Omkar Kumbhar**
+Full Stack MERN Developer
+Portfolio: https://v2-portfolio-navy.vercel.app/
